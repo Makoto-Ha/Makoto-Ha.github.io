@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>title</title>
+   <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    header{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      background: #fff;
+      box-shadow: 1px 2px 15px rgba(132, 131, 131, 0.218);
+      position: fixed;
+      z-index: 10;
+    }
+    header div:nth-child(1) {
+      font-size: 20px;
+      width: 20%;
+      letter-spacing: 1px;
+      padding: 1em 0 1em 1em; 
+    }
+    ul{
+      width: 80%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    ul li{
+      font-size: 20px;
+      letter-spacing: 1px;
+      line-height: 2em;
+      list-style-type: none;
+      padding: .02em 1em;
+      text-align: center;
+    }
+    /* section */
+    .slideShow {
+      font-size: 20px;
+      max-width: 1100px;
+      padding: 3.8em 0 0 0;
+      margin: 0 auto;
+    }
+    .slideShow .wrap{
+      width: 100%;
+      overflow: hidden;
+    }
+    .slideShow .wrap .imgs{
+      width: 100%;
+      display: flex;
+    }
+    img {
+      position: relative;
+    }
+
+    .content {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1.5em 0 0 0;
+      font-size: 12px;
+    }
+
+    .content > .wrap{
+      display: flex;
+    }
+    .article1 {
+      width: 60%;
+      display: flex;
+      box-shadow: 2px 0px rgba(132, 131, 131, 0.218);
+    }
+
+    .article1 > div:nth-child(2) {
+      padding-left: 2em;
+    }
+
+    .article1 > div{
+      width: 50%;
+    }
+
+    .IGG{
+      width: 100%;
+    }
+
+    .content .article2 {
+      width: 40%;
+      padding-left: 2em;
+    }
+
+    .content .article2 > a {
+      width: 100%;
+      position: relative;
+    }
+
+    .footer {
+      width: 100%;
+      margin-top: 1em;
+      background: rgba(43, 228, 228, 0.181);
+      text-align: center;
+      font-size: .8em;
+    }
+    
+    /* 個別數值調整 */
+    a {
+      text-decoration: none;
+    }
+
+    .content a {
+      display: inline-block;
+      width: 45%;
+      font-size: 1.2em;
+      line-height: 2em;
+    }
+
+    a:hover {
+      color: blue;
+      transition: .5s;
+    }
+
+    img {
+      margin-top: .5em;
+      vertical-align: middle;
+    }
+
+    h1 {
+      font-size: 20px;
+      font-weight: 500;
+      color: rgba(36, 35, 35, 0.848)
+    }
+
+    /* 裝飾  */
+    h1:hover {
+      color: rgb(0, 0, 0);
+      transition: .7s;
+    }
+
+    h2 {
+      position: relative;
+      padding-bottom: .25em;
+    }
+
+    h2::before {
+      content: '';
+      width: 4em;
+      height: 1px;
+      background: rgba(0, 0, 0, 0.864);
+      position: absolute;
+      left: 0;
+      top: 90%;
+    } 
+
+    h2::after {
+      content: '';
+      width: 95%;
+      height: 1px;
+      background: rgba(28, 25, 25, 0.14);
+      position: absolute;
+      left: 0;
+      top: 90%;
+    } 
+
+    .article2 > a::after {
+      content: '';
+      width: 95%;
+      height: 1px;
+      background: rgba(28, 25, 25, 0.14);
+      position: absolute;
+      left: 0;
+      top: 90%;
+    }
+   </style>
+</head>
+<body>
+  <header>
+    <div><a href="#"><h1>朗智科技有限公司</h1></a></div>
+    <ul>
+      <li><a href="#"><h1>關於朗智</h1></a></li>
+      <li><a href="#"><h1>產品應用</h1></a></li>
+      <li><a href="#"><h1>研發技術</h1></a></li>
+      <li><a href="#"><h1>品質認證</h1></a></li>
+      <li><a href="#"><h1>投資者專區</h1></a></li>
+    </ul>
+  </header>
+  <section class="slideShow">
+    <div class="wrap">
+      <div class="imgs">
+        <img src="img1.jpg" alt="img1">
+        <img src="img2.jpg" alt="img2">
+        <img src="img1.jpg" alt="img3">
+      </div>
+    </div>
+  </section>
+
+  <section class="content">
+
+    <div class="wrap">
+      <div class="article1">
+        <div>
+          <h2>關於朗智</h2>
+          <a href="">願景與使命</a>
+          <a href="">組織架構</a>
+          <a href="">人力資源</a>
+          <a href="">公司沿革</a>
+          <a href="">全球營運據點</a>
+          <a href="">社會責任報告書</a>
+          <img src="img3.jpg" alt="img3" class="IGG">
+        </div>
+        <div>
+          <h2>產品介紹</h2>
+          <a href="">異材質結合零組件</a>
+          <a href="">按鍵輸入裝置</a>
+          <a href="">細橡膠零組件</a>
+          <a href="">2D/3D保護玻璃</a>
+          <a href="">模組產品</a>
+          <a href="">其他</a>
+          <img src="img4.jpg" alt="img4">
+        </div>
+  
+      </div>
+  
+      <div class="article2">
+        <h2>最新消息</h2>   
+        <a href=""><span>•</span>閎暉實業自結2022年6月全球合併營收新台幣1.75億元</a>
+        <a href=""><span>•</span>閎暉實業自結2022年6月全球合併營收新台幣1.93億元</a>
+        <a href=""><span>•</span>閎暉實業自結2022年6月全球合併營收新台幣1.79億元</a>
+        <a href=""><span>•</span>閎暉實業自結2022年6月全球合併營收新台幣1.79億元</a>
+        <a href=""><span>•</span>閎暉實業自結2022年6月全球合併營收新台幣1.79億元</a>
+        <a href=""><span>•</span>閎暉實業自結2022年6月全球合併營收新台幣1.79億元</a>
+        <a href=""><span>•</span>閎暉實業自結2022年6月全球合併營收新台幣1.79億元</a>
+        <a href=""><span>•</span>閎暉實業自結2022年6月全球合併營收新台幣1.79億元</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="footer">251新北市淡水區奎柔山路100之6號 +886-2-2625-0555</section>
+</body>
+<script>
+  const imgs = document.querySelectorAll('.slideShow > .wrap > .imgs img');
+  let count = 0;
+  let time;
+
+  setInterval(() => {
+    if(!time) {
+      time = setInterval(() => {
+        if(count === (imgs.length-1) * 1200) { // 當移動到最後一張圖時 
+          imgs.forEach(img => img.style.right = 0); // 把最後一張圖設為第一張
+          count = 0;
+        }
+
+        count += 10;
+        imgs.forEach(img => img.style.right = `${count}px`);
+        console.log(count % 1200 === 0);
+        if(count % 1200 === 0) {
+          clearInterval(time);
+          time = null;
+        }
+
+      }, 5); 
+    }  
+  }, 4500);
+  
+  // let index = 0;
+  // setInterval(() => {
+  //   let imgs = ['img1.jpg', 'img2.jpg'];
+  //   if(!imgs[index]) {
+  //     index = 0;
+  //   }
+  //   img.src = imgs[index];
+  //   index++;
+  // }, 1300)
+</script>
+</html>
