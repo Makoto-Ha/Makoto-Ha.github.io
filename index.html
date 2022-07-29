@@ -57,7 +57,7 @@
       width: 100%;
       display: flex;
     }
-
+    
     /* 內容 */
     .content {
       margin: 0 auto;
@@ -85,7 +85,7 @@
 
     .content .article2 {
       width: 40%;
-      padding-left: 2em;
+      /* padding-left: 2em; */
     }
 
     .content .article2 > a {
@@ -210,6 +210,9 @@
       .content .article1 > div {
         width: 100%;
       }
+      .content .article1 > div:nth-child(2) {
+        padding-left: 0;
+      }
     }
    </style>
 </head>
@@ -300,15 +303,5 @@
       }, 5); 
     }  
   }, 4500);
-  
-  // let index = 0;
-  // setInterval(() => {
-  //   let imgs = ['img1.jpg', 'img2.jpg'];
-  //   if(!imgs[index]) {
-  //     index = 0;
-  //   }
-  //   img.src = imgs[index];
-  //   index++;
-  // }, 1300)
 </script>
 </html>
