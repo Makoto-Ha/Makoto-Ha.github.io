@@ -184,9 +184,9 @@
     }
 
     /* RWD */
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
       header {
-        visibility: hidden;
+        display: none;
       }
       .content > .wrap {
         flex-direction: column;
@@ -197,6 +197,18 @@
       .content .article2 {
         width: 100%;
         text-align: center;
+      }
+    }
+
+    @media screen and (max-width: 720px) {
+      .slideShow {
+        display: none;
+      }
+      .content .article1 {
+        flex-direction: column;
+      }
+      .content .article1 > div {
+        width: 100%;
       }
     }
    </style>
