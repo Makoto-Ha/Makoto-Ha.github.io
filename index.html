@@ -120,7 +120,6 @@
     }
 
     img {
-      margin-top: .5em;
       position: relative;
       vertical-align: middle;
     }
@@ -172,14 +171,18 @@
       top: 90%;
     }
 
-    .imgWidth {
+    .imgIcon {
+      margin-top: .5em;
       max-width: 100%;
     }
 
     /* RWD */
     @media screen and (max-width: 1024px) {
-      header {
+      header { /* 導覽列去掉 */
         display: none;
+      }
+      .slideShow { /* 把上方padding-top去掉 */
+        padding-top: 0;
       }
       .content > .wrap {
         flex-direction: column;
@@ -192,6 +195,11 @@
         width: 100%;
         text-align: center;
       }
+      h2::before { /* h2標題下面的線置中 */
+        left: 0;
+        right: 0;
+        margin: auto;
+      } 
     }
 
     @media screen and (max-width: 720px) {
@@ -204,7 +212,10 @@
       .content .article1 > div {
         width: 100%;
       }
-      .content .article1 > div:nth-child(2) {
+      .content .article1 > div:nth-child(2) { /* 因為手機都是一個圖片一版面，所以不需要padding-left */
+        padding-left: 0;
+      }
+      .content .article2 {
         padding-left: 0;
       }
     }
@@ -243,7 +254,7 @@
           <a href="">公司沿革</a>
           <a href="">全球營運據點</a>
           <a href="">社會責任報告書</a>
-          <img src="img3.jpg" alt="img3" class="imgWidth">
+          <img src="img3.jpg" alt="img3" class="imgIcon">
         </div>
         <div>
           <h2>產品介紹</h2>
@@ -253,7 +264,7 @@
           <a href="">2D/3D保護玻璃</a>
           <a href="">模組產品</a>
           <a href="">其他</a>
-          <img src="img4.jpg" alt="img4" class="imgWidth">
+          <img src="img4.jpg" alt="img4" class="imgIcon">
         </div>
   
       </div>
