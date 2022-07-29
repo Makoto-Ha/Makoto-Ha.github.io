@@ -13,7 +13,6 @@
     /* 導覽列 */
     header{
       width: 100%;
-      /* min-width: 934px; */
       display: flex;
       justify-content: space-between;
       background: #fff;
@@ -60,6 +59,7 @@
     
     /* 內容 */
     .content {
+      max-width: 1100px;
       margin: 0 auto;
       padding: 1.5em 0 0 0;
       font-size: 12px;
@@ -85,7 +85,8 @@
 
     .content .article2 {
       width: 40%;
-      /* padding-left: 2em; */
+      box-sizing: border-box;
+      padding-left: 2em;
     }
 
     .content .article2 > a {
@@ -95,7 +96,6 @@
 
     .footer {
       width: 100%;
-      /* min-width: 934px; */
       margin-top: 1em;
       background: rgba(43, 228, 228, 0.181);
       text-align: center;
@@ -172,15 +172,8 @@
       top: 90%;
     }
 
-    /* 變數調整 */
-    /* .maxmin {
-      max-width: 1100px;
-      min-width: 934px;
-    } */
-
     .imgWidth {
       max-width: 100%;
-      max-height: 50%;
     }
 
     /* RWD */
@@ -193,6 +186,7 @@
       }
       .content .article1 {
         width: 100%;
+        text-align: center;
       }
       .content .article2 {
         width: 100%;
@@ -227,7 +221,7 @@
       <li><a href="#"><h1>投資者專區</h1></a></li>
     </ul>
   </header>
-  <section class="slideShow maxmin">
+  <section class="slideShow">
     <div class="wrap">
       <div class="imgs">
         <img src="img1.jpg" alt="img1">
@@ -237,7 +231,7 @@
     </div>
   </section>
 
-  <section class="content maxmin">
+  <section class="content">
 
     <div class="wrap">
       <div class="article1">
