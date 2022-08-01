@@ -212,14 +212,24 @@
       header h1{
         font-size: 16px;
       }
-      /* ul li{
-        display: none;
-      } */
+      ul {
+        width: 3em;
+        flex-direction: column;
+        justify-content: center;
+      }
+      ul li{
+        list-style-type: none;
+        width: 1.6em;
+        height: .25em;
+        margin: .25em 0;
+        background: rgba(70, 67, 67, 0.801);
+      }
       .slideShow {
         display: none;
       }
       .content .article1 {
         flex-direction: column;
+        padding-top: 4em;
       }
       .content .article1 > div {
         width: 100%;
@@ -300,7 +310,7 @@
   const imgs = document.querySelectorAll('.slideShow > .wrap > .imgs img');
   let count = 0;
   let time;
-
+  // 輪播圖
   setInterval(() => {
     if(!time) {
       time = setInterval(() => {
@@ -319,7 +329,7 @@
       }, 5); 
     }  
   }, 4500);
-
+  // RWD樣式切換
   let title = document.querySelector('header h1'), titleTemp = {};
   let ul = document.querySelector('ul');
   let header = document.querySelector('header');
@@ -337,11 +347,8 @@
 
     // 這裡還沒寫完，想寫把style裡面的ul屬性替換
     
-    // document.addEventListener('DOMContentLoaded', () => {
-    //   let reg = /ul li\{[\w\W]+?\}/i; // 把導覽列右邊li樣式拔掉
-    //   header.lastChild.firstChild.textContent = '123';
-    //   document.querySelector('style').innerHTML.replace(reg, '');
-    // });
+    let reg = /ul li\{[\w\W]+?\}/i; // 把導覽列右邊li樣式拔掉
+    document.querySelector('style').innerHTML = document.querySelector('style').innerHTML.replace(reg, '');
   }
 
   if(document.body.offsetWidth > 720) {
