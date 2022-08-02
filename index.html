@@ -115,6 +115,7 @@
       width: 45%;
       font-size: 1.2em;
       line-height: 2em;
+      color: #000;
     }
 
     a:hover {
@@ -192,8 +193,13 @@
 
     #stretchBlock > a {
       font-size: 1.3em;
-      width: auto;
+      width: 100%;
+      text-align: center;
       padding: .7em 0;
+    }
+    #stretchBlock > a:hover {
+      background: rgba(21, 20, 20, 0.27);
+      color: #fff;
     }
     /* -------- */
 
@@ -373,7 +379,7 @@
   if(document.body.offsetWidth <= 720) {
     let stretchas = document.querySelectorAll('#stretchBlock > a');
     for(let i=0; i<stretchas.length; i++) {
-      stretchas[i].addEventListener('click', function(e) {
+      stretchas[i].addEventListener('click', function() {
         alert(this.textContent);
       });
     }
