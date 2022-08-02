@@ -20,12 +20,14 @@
       position: fixed;
       z-index: 10;
     }
+    /* 導覽列左邊 */
     header div:nth-child(1) {
       font-size: 20px;
       width: 25%;
       letter-spacing: 1px;
       padding: 1em 0 1em 1em; 
     }
+    /* 導導覽列右邊 */
     ul{
       width: 75%;
       display: flex;
@@ -68,7 +70,7 @@
     .content > .wrap{
       display: flex;
     }
-
+    /* 左邊內容 */
     .article1 {
       width: 60%;
       display: flex;
@@ -83,6 +85,7 @@
       width: 50%;
     }
 
+    /* 右邊內容 */
     .content .article2 {
       width: 40%;
       box-sizing: border-box;
@@ -177,6 +180,22 @@
       margin-top: .5em;
       max-width: 100%;
     }
+    /* 變數class */
+    /* .change的flex作用在inline-style上 */
+    .change {
+      width: 100%;
+      background: #fff;
+      padding-top: 5em;  
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #stretchBlock > a {
+      font-size: 1.3em;
+      width: auto;
+      padding: .7em 0;
+    }
+    /* -------- */
 
     /* RWD */
     @media screen and (max-width: 1024px) {
@@ -241,12 +260,14 @@
       .content .article1 > div {
         width: 100%;
       }
-      .content .article1 > div:nth-child(2) { /* 因為手機都是一個圖片一版面，所以不需要padding-left */
+      /* 因為手機都是一個圖片一版面，所以不需要padding-left */
+      .content .article1 > div:nth-child(2) { 
         padding-left: 0;
       }
       .content .article2 {
         padding-left: 0;
       }
+      /* --------------------------- */
     }
    </style>
 </head>
@@ -273,6 +294,14 @@
 
   <section class="content">
     <div class="wrap">
+      <!-- 按鈕切換用div -->
+      <div id="stretchBlock" style="display: none;">
+        <a href="#">關於朗智</a>
+        <a href="#">產品介紹</a>
+        <a href="#">研發技術</a>
+        <a href="#">品質認證</a>
+        <a href="#">投資者專區</a>
+      </div> 
       <div class="article1">
         <div>
           <h2>關於無名</h2>
@@ -342,14 +371,33 @@
   let header = document.querySelector('header');
   titleTemp.text = title.textContent;
   if(document.body.offsetWidth <= 720) {
+    let stretchas = document.querySelectorAll('#stretchBlock > a');
+    for(let i=0; i<stretchas.length; i++) {
+      stretchas[i].addEventListener('click', function(e) {
+        alert(this.textContent);
+      });
+    }
     title.textContent = '朗智科技'
+    ul.addEventListener('click', () => {
+      let stretchBlock = document.getElementById('stretchBlock');
+      stretchBlock.classList.add('change');
+      stretchBlock.style.display = stretchBlock.style.display === "none" ? 'flex' : 'none';
+    })
   }
 
   if(document.body.offsetWidth > 720) {
     title.textContent = titleTemp.text;
   }
-                                       
-  // header.lastChild.remove(); 
-  // header.appendChild(ul); // 把一開始刪掉的節點存進來
+
+  window.addEventListener('resize', () => {
+    if(document.body.offsetWidth <= 720) {
+      title.textContent = '朗智科技'
+    }
+
+    if(document.body.offsetWidth > 720) {
+      title.textContent = '朗智科技公司'
+    }
+
+  })
 </script>
 </html>
