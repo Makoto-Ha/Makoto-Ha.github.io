@@ -125,7 +125,7 @@
     }
 
     h1 {
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 500;
       color: rgba(36, 35, 35, 0.848)
     }
@@ -141,6 +141,7 @@
       padding-bottom: .25em;
     }
 
+    /* article的h2文字體下面的底線 */
     h2::before {
       content: '';
       width: 4em;
@@ -170,6 +171,7 @@
       left: 0;
       top: 90%;
     }
+    /* ---------------------- */
 
     .imgIcon {
       margin-top: .5em;
@@ -178,9 +180,6 @@
 
     /* RWD */
     @media screen and (max-width: 1024px) {
-      header { /* 導覽列去掉 */
-        /* display: none; */
-      }
       ul li{
         font-size: 16px;
         letter-spacing: 0;
@@ -208,10 +207,7 @@
     }
 
     @media screen and (max-width: 720px) {
-      /* 修改位置 */
-      header h1{
-        font-size: 16px;
-      }
+      /* 導覽列中文字體變成選單 */
       ul {
         width: 3em;
         flex-direction: column;
@@ -219,17 +215,28 @@
       }
       ul li{
         list-style-type: none;
+        letter-spacing: 0;
+        line-height: 0;
         width: 1.6em;
         height: .25em;
         margin: .25em 0;
+        padding: 0;
         background: rgba(70, 67, 67, 0.801);
       }
+      ul li a{
+        display: none;
+      }
+      ul li:nth-child(2n+2) {
+        display: none;
+      }
+      /* --------------------------- */
+
       .slideShow {
         display: none;
       }
       .content .article1 {
         flex-direction: column;
-        padding-top: 4em;
+        padding-top: 5em;
       }
       .content .article1 > div {
         width: 100%;
@@ -336,19 +343,6 @@
   titleTemp.text = title.textContent;
   if(document.body.offsetWidth <= 720) {
     title.textContent = '朗智科技'
-    ul.remove();
-    if(!document.querySelector('ul')) {
-      header.appendChild(document.createElement('ul'));
-      for(let i=0; i<3; i++) {
-        header.lastChild.appendChild(document.createElement('li'));
-      }
-    }
-
-
-    // 這裡還沒寫完，想寫把style裡面的ul屬性替換
-    
-    let reg = /ul li\{[\w\W]+?\}/i; // 把導覽列右邊li樣式拔掉
-    document.querySelector('style').innerHTML = document.querySelector('style').innerHTML.replace(reg, '');
   }
 
   if(document.body.offsetWidth > 720) {
