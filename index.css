@@ -16,8 +16,6 @@
 /* 這裡shrink防止圖片因為flex收縮變形 */
 .slideShow .wrap .imgs img {
   flex-shrink: 0;
-  width: 1200px;
-  height: 450px;
 }
 
 /* 內容 */
