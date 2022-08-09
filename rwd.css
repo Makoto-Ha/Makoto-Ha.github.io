@@ -1,0 +1,80 @@
+/* RWD */
+@media screen and (max-width: 1024px) {
+  header ul li{
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 1.5em;
+  }
+  .slideShow { /* 把上方padding-top去掉 */
+    padding-top: 0;
+  }
+  .content > .wrap {
+    flex-direction: column;
+  }
+  .content .article1 {
+    width: 100%;
+    text-align: center;
+  }
+  .content .article2 {
+    width: 100%;
+    text-align: center;
+  }
+  /* h2標題下面的線置中 */
+  h2::before { 
+    left: 0;
+    right: 0;
+    margin: auto;
+  } 
+  /* ----------------- */
+}
+
+@media screen and (max-width: 720px) {
+  header div:nth-child(1) {
+    width: 50%;
+  }
+  /* 導覽列中文字體變成選單 */
+  header ul {
+    width: 3em;
+    flex-direction: column;
+    justify-content: center;
+  }
+  header ul li{
+    list-style-type: none;
+    letter-spacing: 0;
+    line-height: 0;
+    width: 1.6em;
+    height: .25em;
+    margin: .25em 0;
+    padding: 0;
+    background: rgba(70, 67, 67, 0.801);
+  }
+  header ul li a{
+    display: none;
+  }
+  header ul li:nth-child(2n+2) {
+    display: none;
+  }
+  /* --------------------------- */
+
+  .slideShow {
+    display: none;
+  }
+  .content .article1 {
+    flex-direction: column;
+    padding-top: 5em;
+  }
+  .content .article1 > div {
+    width: 100%;
+  }
+  /* 因為手機都是一個圖片一版面，所以不需要padding-left */
+  .content .article1 > div:nth-child(2) { 
+    padding-left: 0;
+  }
+  .content .article2 {
+    padding-left: 0;
+  }
+  .content a {
+    font-size: 1.2em;
+  }
+  /* --------------------------- */
+}

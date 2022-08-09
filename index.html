@@ -3,295 +3,26 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>無名科技有限公司</title>
+   <link rel="icon" href="langzhiLogo.JPG" type="image/icon type">
+   <link rel="stylesheet" href="header.css">
+   <link rel="stylesheet" href="index.css">
+   <link rel="stylesheet" href="rwd.css">
+   <title>朗智科技有限公司</title>
    <style>
     * {
       margin: 0;
       padding: 0;
     }
-
-    /* 導覽列 */
-    header{
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      background: #fff;
-      box-shadow: 1px 2px 15px rgba(132, 131, 131, 0.218);
-      position: fixed;
-      z-index: 10;
-    }
-    /* 導覽列左邊 */
-    header div:nth-child(1) {
-      font-size: 20px;
-      width: 25%;
-      letter-spacing: 1px;
-      padding: 1em 0 1em 1em; 
-    }
-    /* 導導覽列右邊 */
-    ul{
-      width: 75%;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-    }
-    ul li{
-      font-size: 18px;
-      letter-spacing: 1px;
-      line-height: 2em;
-      list-style-type: none;
-      padding: .02em .5em;
-      text-align: center;
-    }
-
-    /* 輪播圖 */
-    .slideShow {
-      font-size: 20px;
-      max-width: 1200px;
-      padding: 3.8em 0 0 0;
-      margin: 0 auto;
-    }
-    .slideShow .wrap{
-      width: 100%;
-      overflow: hidden;
-    }
-    .slideShow .wrap .imgs{
-      width: 100%;
-      display: flex;
-    }
-    
-    /* 內容 */
-    .content {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 1.5em 0 0 0;
-      font-size: 12px;
-    }
-
-    .content > .wrap{
-      display: flex;
-    }
-    /* 左邊內容 */
-    .article1 {
-      width: 60%;
-      display: flex;
-      box-shadow: 2px 0px rgba(132, 131, 131, 0.218);
-    }
-
-    .article1 > div:nth-child(2) {
-      padding-left: 2em;
-    }
-
-    .article1 > div{
-      width: 50%;
-    }
-
-    /* 右邊內容 */
-    .content .article2 {
-      width: 40%;
-      box-sizing: border-box;
-      padding-left: 2em;
-    }
-
-    .content .article2 > a {
-      width: 100%;
-      position: relative;
-    }
-
-    .footer {
-      width: 100%;
-      margin-top: 1em;
-      padding: .4em 0;
-      background: rgba(41, 54, 54, 0.181);
-      text-align: center;
-      font-size: .8em;
-    }
-    
-    /* 個別數值調整 */
-    a {
-      text-decoration: none;
-    }
-
-    .content a {
-      display: inline-block;
-      margin: .15em 0;
-      width: 45%;
-      font-size: 1.3em;
-      line-height: 2em;
-      color: rgba(43, 42, 42, 0.821);
-    }
-
-    .content h2 {
-      font-size: 20px;
-      color: rgba(206, 50, 50, 0.861);
-    }
-
-    a:hover {
-      color: blue;
-      transition: .3s;
-    }
-
-    img {
-      position: relative;
-      vertical-align: middle;
-    }
-
-    h1 {
-      font-size: 18px;
-      font-weight: 500;
-      color: rgba(36, 35, 35, 0.848)
-    }
-
-    /* 裝飾  */
-    h1:hover {
-      color: rgb(0, 0, 0);
-      transition: .7s;
-    }
-
-    h2 {
-      position: relative;
-      padding-bottom: .25em;
-    }
-
-    /* article的h2文字體下面的底線 */
-    h2::before {
-      content: '';
-      width: 4em;
-      height: 1px;
-      background: rgba(0, 0, 0, 0.864);
-      position: absolute;
-      left: 0;
-      top: 90%;
-    } 
-
-    h2::after {
-      content: '';
-      width: 95%;
-      height: 1px;
-      background: rgba(28, 25, 25, 0.14);
-      position: absolute;
-      left: 0;
-      top: 90%;
-    } 
-
-    .article2 > a::after {
-      content: '';
-      width: 95%;
-      height: 1px;
-      background: rgba(28, 25, 25, 0.14);
-      position: absolute;
-      left: 0;
-      top: 90%;
-    }
-    /* ---------------------- */
-
-    .imgIcon {
-      margin-top: .5em;
-      max-width: 100%;
-    }
-    /* 變數class */
-    /* .change的flex作用在inline-style上 */
-    .change {
-      width: 100%;
-      background: #fff;
-      padding-top: 5em;  
-      flex-direction: column;
-      align-items: center;
-    }
-
-    #stretchBlock > a {
-      font-size: 1.3em;
-      width: 100%;
-      text-align: center;
-      padding: .7em 0;
-    }
-    #stretchBlock > a:hover {
-      background: rgba(21, 20, 20, 0.27);
-      color: #fff;
-    }
-    /* -------- */
-
-    /* RWD */
-    @media screen and (max-width: 1024px) {
-      ul li{
-        font-size: 16px;
-        letter-spacing: 0;
-        line-height: 1.5em;
-      }
-      .slideShow { /* 把上方padding-top去掉 */
-        padding-top: 0;
-      }
-      .content > .wrap {
-        flex-direction: column;
-      }
-      .content .article1 {
-        width: 100%;
-        text-align: center;
-      }
-      .content .article2 {
-        width: 100%;
-        text-align: center;
-      }
-      h2::before { /* h2標題下面的線置中 */
-        left: 0;
-        right: 0;
-        margin: auto;
-      } 
-    }
-
-    @media screen and (max-width: 720px) {
-      /* 導覽列中文字體變成選單 */
-      ul {
-        width: 3em;
-        flex-direction: column;
-        justify-content: center;
-      }
-      ul li{
-        list-style-type: none;
-        letter-spacing: 0;
-        line-height: 0;
-        width: 1.6em;
-        height: .25em;
-        margin: .25em 0;
-        padding: 0;
-        background: rgba(70, 67, 67, 0.801);
-      }
-      ul li a{
-        display: none;
-      }
-      ul li:nth-child(2n+2) {
-        display: none;
-      }
-      /* --------------------------- */
-
-      .slideShow {
-        display: none;
-      }
-      .content .article1 {
-        flex-direction: column;
-        padding-top: 5em;
-      }
-      .content .article1 > div {
-        width: 100%;
-      }
-      /* 因為手機都是一個圖片一版面，所以不需要padding-left */
-      .content .article1 > div:nth-child(2) { 
-        padding-left: 0;
-      }
-      .content .article2 {
-        padding-left: 0;
-      }
-      .content a {
-        font-size: 1.2em;
-      }
-      /* --------------------------- */
-    }
    </style>
 </head>
 <body>
   <header>
-    <div><a href="#"><h1>無名科技有限公司</h1></a></div>
+    <div>
+      <a href="index.html"><img src="langzhiLogo.JPG" alt="langzhiLogo"></a>
+      <a href="index.html"><h1>朗智科技有限公司</h1></a>
+    </div>
     <ul>
-      <li><a href="#"><h1>關於無名</h1></a></li>
+      <li><a href="index/factory.html"><h1>關於朗智</h1></a></li>
       <li><a href="#"><h1>產品應用</h1></a></li>
       <li><a href="#"><h1>研發技術</h1></a></li>
       <li><a href="#"><h1>品質認證</h1></a></li>
@@ -303,6 +34,7 @@
       <div class="imgs">
         <img src="img1.jpg" alt="img1">
         <img src="img2.jpg" alt="img2">
+        <img src="img5.jpg" alt="img2">
         <img src="img1.jpg" alt="img3">
       </div>
     </div>
@@ -312,7 +44,7 @@
     <div class="wrap">
       <!-- 按鈕切換用div -->
       <div id="stretchBlock" style="display: none;">
-        <a href="#">關於朗智</a>
+        <a href="index/factory.html">關於朗智</a>
         <a href="#">產品介紹</a>
         <a href="#">研發技術</a>
         <a href="#">品質認證</a>
@@ -320,23 +52,23 @@
       </div> 
       <div class="article1">
         <div>
-          <h2>關於無名</h2>
-          <a href="">願景與使命</a>
-          <a href="">組織架構</a>
-          <a href="">人力資源</a>
-          <a href="">公司沿革</a>
-          <a href="">全球營運據點</a>
-          <a href="">社會責任報告書</a>
+          <h2>廠區介紹</h2>
+          <a href="#">精煉室</a>
+          <a href="#">成形區</a>
+          <a href="#">沖孔區</a>
+          <a href="#">檢驗區</a>
+          <a href="#">會議室</a>
+          <a href="#">辦公室</a>
           <img src="img3.jpg" alt="img3" class="imgIcon">
         </div>
         <div>
           <h2>產品介紹</h2>
-          <a href="">異材質結合零組件</a>
-          <a href="">按鍵輸入裝置</a>
-          <a href="">細橡膠零組件</a>
-          <a href="">2D/3D保護玻璃</a>
-          <a href="">模組產品</a>
-          <a href="">其他</a>
+          <a href="#">異材質結合零組件</a>
+          <a href="#">按鍵輸入裝置</a>
+          <a href="#">細橡膠零組件</a>
+          <a href="#">2D/3D保護玻璃</a>
+          <a href="#">模組產品</a>
+          <a href="#">其他</a>
           <img src="img4.jpg" alt="img4" class="imgIcon">
         </div>
   
@@ -344,14 +76,9 @@
   
       <div class="article2">
         <h2>最新消息</h2>   
-        <a href=""><span>•</span>無名實業自結2022年6月全球合併營收新台幣1.75億元</a>
-        <a href=""><span>•</span>無名實業自結2022年6月全球合併營收新台幣1.93億元</a>
-        <a href=""><span>•</span>無名實業自結2022年6月全球合併營收新台幣1.79億元</a>
-        <a href=""><span>•</span>無名實業自結2022年6月全球合併營收新台幣1.79億元</a>
-        <a href=""><span>•</span>無名實業自結2022年6月全球合併營收新台幣1.79億元</a>
-        <a href=""><span>•</span>無名實業自結2022年6月全球合併營收新台幣1.79億元</a>
-        <a href=""><span>•</span>無名實業自結2022年6月全球合併營收新台幣1.79億元</a>
-        <a href=""><span>•</span>無名實業自結2022年6月全球合併營收新台幣1.79億元</a>
+        <a href=""><span>•</span>公司2022年7月訂單</a>
+        <a href=""><span>•</span>公司2022年6月訂單</a>
+        <a href=""><span>•</span>公司2022年5月訂單</a>
       </div>
     </div>
   </section>
@@ -382,18 +109,21 @@
     }  
   }, 4500);
   // RWD樣式切換
-  let title = document.querySelector('header h1'), titleTemp = {};
+  let title = document.querySelector('header h1');
   let ul = document.querySelector('ul');
   let header = document.querySelector('header');
-  titleTemp.text = title.textContent;
+
+  if(document.body.offsetWidth <= 1024) {
+    title.textContent = '朗智科技';
+  }
+
   if(document.body.offsetWidth <= 720) {
-    let stretchas = document.querySelectorAll('#stretchBlock > a');
-    for(let i=0; i<stretchas.length; i++) {
-      stretchas[i].addEventListener('click', function() {
-        alert(this.textContent);
-      });
-    }
-    title.textContent = '朗智科技'
+    // let stretchas = document.querySelectorAll('#stretchBlock > a');
+    // for(let i=0; i<stretchas.length; i++) {
+    //   stretchas[i].addEventListener('click', function() {
+    //     alert(this.textContent);
+    //   });
+    // }
     ul.addEventListener('click', () => {
       let stretchBlock = document.getElementById('stretchBlock');
       stretchBlock.classList.add('change');
@@ -401,19 +131,14 @@
     })
   }
 
-  if(document.body.offsetWidth > 720) {
-    title.textContent = titleTemp.text;
-  }
+  // window.addEventListener('resize', () => {
+  //   if(document.body.offsetWidth <= 1024) {
+  //     title.textContent = '朗智科技';
+  //   }
 
-  window.addEventListener('resize', () => {
-    if(document.body.offsetWidth <= 720) {
-      title.textContent = '朗智科技'
-    }
-
-    if(document.body.offsetWidth > 720) {
-      title.textContent = '朗智科技公司'
-    }
-
-  })
+  //   if(document.body.offsetWidth > 720) {
+  //     title.textContent = '朗智科技公司';
+  //   }
+  // })
 </script>
 </html>

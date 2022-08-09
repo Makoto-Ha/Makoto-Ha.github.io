@@ -1,0 +1,137 @@
+/* 輪播圖 */
+.slideShow {
+  font-size: 20px;
+  max-width: 1200px;
+  padding: 3.8em 0 0 0;
+  margin: 0 auto;
+}
+.slideShow .wrap{
+  width: 100%;
+  overflow: hidden;
+}
+.slideShow .wrap .imgs{
+  width: 100%;
+  display: flex;
+}
+/* 這裡shrink防止圖片因為flex收縮變形 */
+.slideShow .wrap .imgs img {
+  flex-shrink: 0;
+  width: 1200px;
+  height: 450px;
+}
+
+/* 內容 */
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5em 0 0 0;
+  font-size: 12px;
+}
+
+.content > .wrap{
+  display: flex;
+}
+/* 左邊內容 */
+.article1 {
+  width: 60%;
+  display: flex;
+  box-shadow: 2px 0px rgba(132, 131, 131, 0.218);
+}
+
+.article1 > div:nth-child(2) {
+  padding-left: 2em;
+}
+
+.article1 > div{
+  width: 50%;
+}
+
+/* 右邊內容 */
+.content .article2 {
+  width: 40%;
+  box-sizing: border-box;
+  padding-left: 2em;
+}
+
+.content .article2 > a {
+  width: 100%;
+  position: relative;
+}
+
+.footer {
+  width: 100%;
+  margin-top: 1em;
+  padding: .4em 0;
+  background: rgba(41, 54, 54, 0.181);
+  text-align: center;
+  font-size: .8em;
+}
+
+/* 裝飾  */
+h1:hover {
+  color: rgb(0, 0, 0);
+  transition: .7s;
+}
+
+h2 {
+  position: relative;
+  padding-bottom: .25em;
+}
+
+/* article的h2文字體下面的底線 */
+h2::before {
+  content: '';
+  width: 4em;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.864);
+  position: absolute;
+  left: 0;
+  top: 90%;
+} 
+
+h2::after {
+  content: '';
+  width: 95%;
+  height: 1px;
+  background: rgba(28, 25, 25, 0.14);
+  position: absolute;
+  left: 0;
+  top: 90%;
+} 
+
+.article2 > a::after {
+  content: '';
+  width: 95%;
+  height: 1px;
+  background: rgba(28, 25, 25, 0.14);
+  position: absolute;
+  left: 0;
+  top: 90%;
+}
+/* ---------------------- */
+
+.imgIcon {
+  margin-top: .5em;
+  max-width: 100%;
+}
+/* 變數class */
+/* .change的flex作用在inline-style上 */
+.change {
+  width: 100%;
+  background: #fff;
+  padding-top: 5em;  
+  flex-direction: column;
+  align-items: center;
+}
+
+#stretchBlock > a {
+  font-size: 1.3em;
+  width: 100%;
+  text-align: center;
+  padding: .7em 0;
+}
+#stretchBlock > a:hover {
+  background: rgba(21, 20, 20, 0.27);
+  color: #fff;
+}
+/* -------- */  
