@@ -8,12 +8,6 @@
    <link rel="stylesheet" href="index.css">
    <link rel="stylesheet" href="rwd.css">
    <title>朗智科技有限公司</title>
-   <style>
-    * {
-      margin: 0;
-      padding: 0;
-    }
-   </style>
 </head>
 <body>
   <header>
@@ -22,13 +16,22 @@
       <a href="index.html"><h1>朗智科技有限公司</h1></a>
     </div>
     <ul>
-      <li><a href="index/factory.html"><h1>關於朗智</h1></a></li>
-      <li><a href="#"><h1>產品應用</h1></a></li>
+      <li><a href="#"><h1>關於朗智</h1></a></li>
+      <li><a href="index/factory.html"><h1>廠區介紹</h1></a></li>
       <li><a href="#"><h1>研發技術</h1></a></li>
       <li><a href="#"><h1>品質認證</h1></a></li>
-      <li><a href="#"><h1>投資者專區</h1></a></li>
+      <li></li>
     </ul>
   </header>
+  <!-- 按鈕切換用div -->
+  <div id="stretchBlock" style="display: none;">
+    <a href="#">關於朗智</a>
+    <a href="index/factory.html">廠區介紹</a>
+    <a href="#">研發技術</a>
+    <a href="#">品質認證</a>
+    <a href="#">投資者專區</a>
+  </div> 
+
   <section class="slideShow">
     <div class="wrap">
       <div class="imgs">
@@ -42,14 +45,6 @@
 
   <section class="content">
     <div class="wrap">
-      <!-- 按鈕切換用div -->
-      <div id="stretchBlock" style="display: none;">
-        <a href="index/factory.html">關於朗智</a>
-        <a href="#">產品介紹</a>
-        <a href="#">研發技術</a>
-        <a href="#">品質認證</a>
-        <a href="#">投資者專區</a>
-      </div> 
       <div class="article1">
         <div>
           <h2>廠區介紹</h2>
@@ -83,8 +78,9 @@
     </div>
   </section>
 
-  <section class="footer">251新北市淡水區奎柔山路100之6號 +886-2-2625-0555</section>
+  <section class="footer">251新北市淡水區奎柔山路100之6號 +886-2625-0555</section>
 </body>
+<script src="rwd.js"></script>
 <script>
   const imgs = document.querySelectorAll('.slideShow > .wrap > .imgs img');
   let count = 0;
@@ -108,37 +104,16 @@
       }, 5); 
     }  
   }, 4500);
-  // RWD樣式切換
-  let title = document.querySelector('header h1');
-  let ul = document.querySelector('ul');
-  let header = document.querySelector('header');
 
-  if(document.body.offsetWidth <= 1024) {
-    title.textContent = '朗智科技';
-  }
-
+  // 720px選單下和article1的距離
   if(document.body.offsetWidth <= 720) {
-    // let stretchas = document.querySelectorAll('#stretchBlock > a');
-    // for(let i=0; i<stretchas.length; i++) {
-    //   stretchas[i].addEventListener('click', function() {
-    //     alert(this.textContent);
-    //   });
-    // }
+    let ul = document.querySelector('ul');
     ul.addEventListener('click', () => {
-      let stretchBlock = document.getElementById('stretchBlock');
-      stretchBlock.classList.add('change');
-      stretchBlock.style.display = stretchBlock.style.display === "none" ? 'flex' : 'none';
+      let article1 = document.querySelector('.article1');
+      console.log(document.getElementById('stretchBlock').style.display);
+      document.getElementById('stretchBlock').style.display !== "none" ?
+      article1.classList.add('pt0') : article1.classList.remove('pt0');
     })
   }
-
-  // window.addEventListener('resize', () => {
-  //   if(document.body.offsetWidth <= 1024) {
-  //     title.textContent = '朗智科技';
-  //   }
-
-  //   if(document.body.offsetWidth > 720) {
-  //     title.textContent = '朗智科技公司';
-  //   }
-  // })
 </script>
 </html>

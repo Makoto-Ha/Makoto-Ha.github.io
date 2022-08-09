@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 /* 導覽列 */
 header{
   width: 100%;
@@ -35,12 +39,14 @@ header ul{
   align-items: center;
 }
 header ul li{
+  display: flex;
+  align-items: center;
   font-size: 18px;
+  height: 100%;
   letter-spacing: 1px;
   line-height: 2em;
   list-style-type: none;
   padding: .02em .5em;
-  text-align: center;
 }
 
 /* 個別數值調整 */
@@ -77,3 +83,35 @@ h1 {
   font-weight: 500;
   color: rgba(36, 35, 35, 0.848)
 }
+
+/* 裝飾  */
+header ul li:hover h1{
+  color: rgb(255, 255, 255);
+  transition: .3s;
+}
+
+header ul li:hover {
+  background: rgba(102, 101, 101, 0.606);
+  transition: .3s;
+}
+
+/* 變數class */
+.change {
+  width: 100%;
+  background: #fff;
+  padding-top: 5em;  
+  flex-direction: column;
+  align-items: center;
+}
+/* .change的flex作用在inline-style上 */
+#stretchBlock > a {
+  font-size: 1.1em;
+  width: 100%;
+  text-align: center;
+  padding: .7em 0;
+}
+#stretchBlock > a:hover {
+  background: rgba(21, 20, 20, 0.27);
+  color: #fff;
+}
+/* -------- */  

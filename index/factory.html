@@ -4,16 +4,40 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="../header.css">
+   <link rel="stylesheet" href="../index.css">
    <link rel="stylesheet" href="../rwd.css">
    <title>title</title>
    <style>
-    * {
-      margin: 0;
-      padding: 0;
+    .factory {
+      width: 90%;
+      padding-top: 5em;
+      margin: 0 auto;
     }
-    .wrap {
-      width: 100%;
-      display: flex;
+    .factory .wrap {
+      border: 1px solid rgba(108, 103, 103, 0.664);
+      border-radius: 5px;
+    }
+    .factory .display {
+      flex-direction: column;
+    }
+    .factory .display ul {
+      list-style-type: none;
+      font-size: 1.3em;
+    }
+    .factory .display li {
+      list-style-type: none;
+      border-top: 1px solid rgba(67, 65, 65, 0.373);
+      padding: .3em;
+    }
+    .factory .display li a{
+      padding-left: .5em;
+    }
+    .factory .wrap > div:nth-child(1) {
+      padding: .3em;
+    }
+    .factory h3 {
+      font-size: 25px;
+      padding-left: .5em;
     }
    </style>
 </head>
@@ -24,15 +48,44 @@
       <a href="../index.html"><h1>朗智科技有限公司</h1></a>
     </div>
     <ul>
-      <li><a href="#"><h1>關於朗智</h1></a></li>
-      <li><a href="#"><h1>產品應用</h1></a></li>
+      <li><a href="factory.html"><h1>關於朗智</h1></a></li>
+      <li><a href="#"><h1>廠區介紹</h1></a></li>
       <li><a href="#"><h1>研發技術</h1></a></li>
       <li><a href="#"><h1>品質認證</h1></a></li>
-      <li><a href="#"><h1>投資者專區</h1></a></li>
+      <li></li>
     </ul>
   </header>
-  <div class="wrap">
-    <p style="margin: 0 auto; padding-top: 100px">關於朗智關於你關於我關於他</p>
-  </div>
+   <!-- 按鈕切換用div -->
+  <div id="stretchBlock" style="display: none;">
+    <a href="#">關於朗智</a>
+    <a href="factory.html">廠區介紹</a>
+    <a href="#">研發技術</a>
+    <a href="#">品質認證</a>
+    <a href="#">投資者專區</a>
+  </div> 
+  <section>
+    <div class="factory">
+      <div class="wrap">
+        <div><h3>廠區介紹</h3></div>
+        <div class="display" style="display: none">
+          <ul>
+            <li><a href="#">精煉室</a></li>
+            <li><a href="#">成形區</a></li>
+            <li><a href="#">沖孔區</a></li>
+            <li><a href="#">檢驗區</a></li>
+            <li><a href="#">會議室</a></li>    
+            <li><a href="#">辦公室</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 </body>
+<script src="../rwd.js"></script>
+<script>
+  document.querySelector('.factory h3').addEventListener('click', () => {
+    let factory = document.querySelector('.factory .display');
+    factory.style.display = factory.style.display === 'none' ? 'flex' : 'none';
+  })
+</script>
 </html>
