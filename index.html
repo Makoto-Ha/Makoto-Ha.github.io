@@ -104,16 +104,5 @@
       }, 5); 
     }  
   }, 4500);
-
-  // 720px選單下和article1的距離
-  if(document.body.offsetWidth <= 720) {
-    let ul = document.querySelector('ul');
-    ul.addEventListener('click', () => {
-      let article1 = document.querySelector('.article1');
-      console.log(document.getElementById('stretchBlock').style.display);
-      document.getElementById('stretchBlock').style.display !== "none" ?
-      article1.classList.add('pt0') : article1.classList.remove('pt0');
-    })
-  }
 </script>
 </html>
