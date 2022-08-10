@@ -16,6 +16,7 @@
     .factory .wrap {
       border: 1px solid rgba(108, 103, 103, 0.664);
       border-radius: 5px;
+      position: relative;
     }
     .factory .display {
       flex-direction: column;
@@ -26,18 +27,30 @@
     }
     .factory .display li {
       list-style-type: none;
-      border-top: 1px solid rgba(67, 65, 65, 0.373);
+      border-top: 1px solid rgba(102, 98, 98, 0.212);
       padding: .3em;
     }
     .factory .display li a{
       padding-left: .5em;
+      color: #000;
+    }
+    .factory .display li:hover{
+      background: rgba(189, 178, 178, 0.466);
+      transition: .3s;
     }
     .factory .wrap > div:nth-child(1) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       padding: .3em;
     }
     .factory h3 {
       font-size: 25px;
       padding-left: .5em;
+    }
+    .triangle {
+      font-size: 20px;
+      padding-right: 12.5px;
     }
    </style>
 </head>
@@ -66,7 +79,10 @@
   <section>
     <div class="factory">
       <div class="wrap">
-        <div><h3>廠區介紹</h3></div>
+        <div>
+          <h3>廠區介紹</h3>
+          <span class="triangle">▼</span>
+        </div>
         <div class="display" style="display: none">
           <ul>
             <li><a href="#">精煉室</a></li>
@@ -83,7 +99,7 @@
 </body>
 <script src="../rwd.js"></script>
 <script>
-  document.querySelector('.factory h3').addEventListener('click', () => {
+  document.querySelector('.factory .wrap > div:nth-child(1)').addEventListener('click', () => {
     let factory = document.querySelector('.factory .display');
     factory.style.display = factory.style.display === 'none' ? 'flex' : 'none';
   })
