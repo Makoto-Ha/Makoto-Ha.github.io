@@ -10,8 +10,8 @@
    <style>
     .factory {
       width: 90%;
-      padding-top: 1em;
       margin: 0 auto;
+      padding-top: 1em;
     }
     .factory .wrap {
       border: 1px solid rgba(108, 103, 103, 0.664);
@@ -42,15 +42,27 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: .3em;
+      padding: .5em;
     }
     .factory h3 {
       font-size: 25px;
-      padding-left: .5em;
     }
     .triangle {
-      font-size: 20px;
-      padding-right: 12.5px;
+      font-size: 1em;
+    }
+    .office {
+      width: 90%;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      padding-top: 1em;
+    }
+    .office img {
+      width: 50%;
+    }
+    .office span {
+      display: block;
+      width: 50%;
     }
    </style>
 </head>
@@ -62,7 +74,7 @@
     </div>
     <ul>
       <li><a href="factory.html"><h1>關於朗智</h1></a></li>
-      <li><a href="#"><h1>廠區介紹</h1></a></li>
+      <li><a href="#"><h1>廠區目錄</h1></a></li>
       <li><a href="#"><h1>研發技術</h1></a></li>
       <li><a href="#"><h1>品質認證</h1></a></li>
       <li></li>
@@ -71,7 +83,7 @@
    <!-- 按鈕切換用div -->
   <div id="stretchBlock" style="display: none;">
     <a href="#">關於朗智</a>
-    <a href="factory.html">廠區介紹</a>
+    <a href="factory.html">廠區目錄</a>
     <a href="#">研發技術</a>
     <a href="#">品質認證</a>
     <a href="#">投資者專區</a>
@@ -80,7 +92,7 @@
     <div class="factory">
       <div class="wrap">
         <div>
-          <h3>廠區介紹</h3>
+          <h3>廠區目錄</h3>
           <span class="triangle">▼</span>
         </div>
         <div class="display" style="display: none">
@@ -96,12 +108,24 @@
       </div>
     </div>
   </section>
+
+  <section class="fImg">
+    <div class="office">
+      <img src="../office.jpg" alt="office">
+      <span></span>
+      <span></span>
+      <img src="../refinement.jpg" alt="refinement">
+    </div>
+  </section>
+
 </body>
 <script src="../rwd.js"></script>
 <script>
   document.querySelector('.factory .wrap > div:nth-child(1)').addEventListener('click', () => {
+    let triangle = document.querySelector('.triangle');
     let factory = document.querySelector('.factory .display');
-    factory.style.display = factory.style.display === 'none' ? 'flex' : 'none';
+    factory.style.display = factory.style.display === 'none' ? 'flex' : 'none'; 
+    triangle.textContent = factory.style.display === 'none' ? '▼' : '▲';
   })
 </script>
 </html>
