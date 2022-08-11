@@ -8,6 +8,7 @@
    <link rel="stylesheet" href="../rwd.css">
    <title>title</title>
    <style>
+    /* 選單 */
     .factory {
       max-width: 1200px;
       width: 90%;
@@ -51,20 +52,56 @@
     .triangle {
       font-size: 1em;
     }
-    .fImg {
+
+    /* 圖片區和1024px選單區 */
+    .container {
       max-width: 1200px;
       width: 90%;
-      margin: 0 auto;
+      margin: 1em auto 0 auto;
+    }
+    .container > .wrap {
+      display: flex;
+    }
+    /* 1024px左邊選單區 */
+    .container .option {
+      width: 20%;
+      font-size: 1.5em;
+      padding-right: 1em;
+      /* 
+        為了置中使用padding-left， 
+        因為右邊多了10%，所以平均分配左邊要隔5%，     
+        還要扣掉padding-right的1em 
+      */
+      padding-left: calc(5% - 1em); 
+    }
+    .option h3 {
+      background:radial-gradient(circle farthest-corner at left,rgb(247, 123, 41),rgb(247, 11, 11));
+      padding: .2em;
+    }
+    .option ul li {
+      display: flex;   /* 這邊設置flex為了讓圖標和自體置中 */
+      align-items: center;
+      border-bottom: 1px solid #ccc;
+      list-style-type: none;
+    }
+    .option ul li a{
+      line-height: 200%;
+      color: rgb(58, 57, 57);
+    }
+    .option span {
+      font-size: .5em;
+      padding: 0 .2em 0 1em;
+    }
+    /* 右邊廠所圖片區 */
+    .office {
+      width: 70%;
     }
     .office > div {
       width: 100%;
       display: flex;
       align-items: center;
       flex-wrap: wrap;
-      background:linear-gradient(45deg, rgba(100, 223, 153, 0.3) 50%, rgba(34, 249, 217, 0.3) 50%);
-    }
-    .office > div:nth-child(1) {
-      margin-top: 1em;
+      background:linear-gradient(45deg, rgba(58, 5, 249, 0.93) 50%,rgba(238, 246, 9, 0.924) 50%);
     }
     .office img {
       width: 50%;
@@ -75,6 +112,12 @@
       text-align: center;
       font-size: 2em;
     }
+    .office span:nth-child(2) {
+      color: rgba(58, 5, 249, 0.93);
+    }
+    .office span:nth-child(1) {
+      color: rgba(238, 246, 9, 0.924);
+    }
     .footer {
       width: 100%;
       margin-top: 1em;
@@ -82,6 +125,20 @@
       background: rgba(41, 54, 54, 0.181);
       text-align: center;
       font-size: .9em;
+    }
+    @media screen and (min-width: 1024px) {
+      #factory {
+        display: none;
+      }
+    }
+
+    @media screen and (max-width: 1024px) {
+      .option {
+        display: none;
+      }
+      .office {
+        width: 100%;
+      }
     }
    </style>
 </head>
@@ -107,7 +164,8 @@
     <a href="#">品質認證</a>
     <a href="#">投資者專區</a>
   </div> 
-  <section>
+  <!-- ------------ -->
+  <section id="factory">
     <div class="factory">
       <div class="wrap">
         <div>
@@ -128,23 +186,36 @@
     </div>
   </section>
 
-  <section class="fImg">
-    <div class="office">
-      <div>
-        <img src="../office.jpg" alt="office">
-        <span>會議室</span>
+  <section class="container">
+    <div class="wrap">
+      <div class="option">
+        <h3>Factory</h3>
+        <ul>
+          <li><span>▶</span><a href="#">會議室</a></li>
+          <li><span>▶</span><a href="#">精煉室</a></li>
+          <li><span>▶</span><a href="#">成型區</a></li>
+          <li><span>▶</span><a href="#">沖孔區</a></li>
+          <li><span>▶</span><a href="#">檢驗區</a></li>
+          <li><span>▶</span><a href="#">辦公室</a></li>
+        </ul>
       </div>
-      <div>
-        <span>精煉室</span>
-        <img src="../refinement.jpg" alt="refinement">
-      </div>
-      <div>
-        <img src="../molding.jpg" alt="molding">
-        <span>成形區</span>
-      </div>
-      <div>
-        <span>沖孔區</span>
-        <img src="../punching.jpg" alt="punching">
+      <div class="office">
+        <div>
+          <img src="../office.jpg" alt="office">
+          <span>會議室</span>
+        </div>
+        <div>
+          <span>精煉室</span>
+          <img src="../refinement.jpg" alt="refinement">
+        </div>
+        <div>
+          <img src="../molding.jpg" alt="molding">
+          <span>成形區</span>
+        </div>
+        <div>
+          <span>沖孔區</span>
+          <img src="../punching.jpg" alt="punching">
+        </div>
       </div>
     </div>
   </section>
