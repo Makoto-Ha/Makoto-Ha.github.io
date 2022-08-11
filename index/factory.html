@@ -92,6 +92,14 @@
       font-size: .5em;
       padding: 0 .2em 0 1em;
     }
+    .option ul li a:hover {
+      color:rgb(231, 33, 56);
+      transition: 0s;
+    }
+    /* 變數 */
+    .option .paddingL {
+      padding: 0 .2em 0 1.5em;
+    }
     /* 右邊廠所圖片區 */
     .office {
       width: 70%;
@@ -223,11 +231,23 @@
 </body>
 <script src="../rwd.js"></script>
 <script>
+  // 1024px以下中間上面會出現下拉選單
   document.querySelector('.factory .wrap > div:nth-child(1)').addEventListener('click', () => {
     let triangle = document.querySelector('.triangle');
     let factory = document.querySelector('.factory .display');
     factory.style.display = factory.style.display === 'none' ? 'flex' : 'none'; 
     triangle.textContent = factory.style.display === 'none' ? '▼' : '▲';
+  })
+  // 1024px的左側選單鼠標移入會浮動
+  let optionAs = [...document.querySelectorAll('.option > ul li a')];
+  let optionSpan = [...document.querySelectorAll('.option > ul li span')];
+  optionAs.forEach((a, i) => {
+    a.addEventListener('mouseover', () => {
+      optionSpan[i].classList.toggle('paddingL');
+    })
+    a.addEventListener('mouseout', () => {
+      optionSpan[i].classList.toggle('paddingL');
+    })
   })
 </script>
 </html>

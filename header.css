@@ -12,12 +12,16 @@
        url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.woff) format('woff'),
        url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.ttf) format('truetype');
 }
+html {
+  height: 100%;
+}
 body {
   font-family: cwTeXYen;
   background-color: #ffffff;
   opacity: 1;
   background-image:  linear-gradient(#fafafa 2px, transparent 2px), linear-gradient(to right, #fafafa 2px, #ffffff 2px);
   background-size: 40px 40px;
+  height: 100%;
 }
 /* 導覽列 */
 /* position是為了讓z-index生效 */
