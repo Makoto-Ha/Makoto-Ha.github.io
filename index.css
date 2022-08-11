@@ -87,7 +87,7 @@ h2::before {
   content: '';
   width: 4em;
   height: 1px;
-  background: rgba(0, 0, 0, 0.864);
+  background: rgba(0, 0, 0);
   position: absolute;
   left: 0;
   top: 90%;
@@ -97,7 +97,7 @@ h2::after {
   content: '';
   width: 100%;
   height: 1px;
-  background: rgba(28, 25, 25, 0.14);
+  background: rgba(28, 25, 25, 0.25);
   position: absolute;
   left: 0;
   top: 90%;
@@ -107,7 +107,7 @@ h2::after {
   content: '';
   width: 100%;
   height: 1px;
-  background: rgba(28, 25, 25, 0.14);
+  background: rgba(28, 25, 25, 0.25);
   position: absolute;
   left: 0;
   top: 90%;
