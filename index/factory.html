@@ -9,6 +9,7 @@
    <title>title</title>
    <style>
     .factory {
+      max-width: 1200px;
       width: 90%;
       margin: 0 auto;
       padding-top: 1em;
@@ -50,12 +51,20 @@
     .triangle {
       font-size: 1em;
     }
-    .office {
+    .fImg {
+      max-width: 1200px;
       width: 90%;
       margin: 0 auto;
+    }
+    .office > div {
+      width: 100%;
       display: flex;
+      align-items: center;
       flex-wrap: wrap;
-      padding-top: 1em;
+      background:linear-gradient(45deg, rgba(100, 223, 153, 0.3) 50%, rgba(34, 249, 217, 0.3) 50%);
+    }
+    .office > div:nth-child(1) {
+      margin-top: 1em;
     }
     .office img {
       width: 50%;
@@ -63,6 +72,8 @@
     .office span {
       display: block;
       width: 50%;
+      text-align: center;
+      font-size: 2em;
     }
    </style>
 </head>
@@ -111,10 +122,22 @@
 
   <section class="fImg">
     <div class="office">
-      <img src="../office.jpg" alt="office">
-      <span></span>
-      <span></span>
-      <img src="../refinement.jpg" alt="refinement">
+      <div>
+        <img src="../office.jpg" alt="office">
+        <span>會議室</span>
+      </div>
+      <div>
+        <span>精煉室</span>
+        <img src="../refinement.jpg" alt="refinement">
+      </div>
+      <div>
+        <img src="../molding.jpg" alt="molding">
+        <span>成形區</span>
+      </div>
+      <div>
+        <span>沖孔區</span>
+        <img src="../punching.jpg" alt="punching">
+      </div>
     </div>
   </section>
 
