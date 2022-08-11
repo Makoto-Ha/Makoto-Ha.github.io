@@ -2,6 +2,19 @@
   margin: 0;
   padding: 0;
 }
+@font-face {
+  font-family: 'cwTeXYen';
+  font-style: normal;
+  font-weight: 500;
+  src: url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.eot);
+  src: url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.eot?#iefix) format('embedded-opentype'),
+       url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.woff2) format('woff2'),
+       url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.woff) format('woff'),
+       url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.ttf) format('truetype');
+}
+body {
+  font-family: cwTeXYen;
+}
 /* 導覽列 */
 /* position是為了讓z-index生效 */
 header{
@@ -54,20 +67,6 @@ header ul li{
 /* 個別數值調整 */
 a {
   text-decoration: none;
-}
-
-.content a {
-  display: inline-block;
-  margin: .15em 0;
-  width: 45%;
-  font-size: 1.3em;
-  line-height: 2em;
-  color: rgba(43, 42, 42, 0.821);
-}
-
-.content h2 {
-  font-size: 20px;
-  color: rgba(206, 50, 50, 0.861);
 }
 
 a:hover {

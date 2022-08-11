@@ -1,6 +1,5 @@
 /* 輪播圖 */
 .slideShow {
-  font-size: 20px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -21,7 +20,21 @@
 .content {
   max-width: 1200px;
   margin: 0 auto;
-  font-size: 12px;
+  font-size: .85em;
+}
+
+.content a {
+  display: inline-block;
+  margin: .15em 0;
+  width: 45%;
+  font-size: 1.3em;
+  line-height: 2em;
+  color: rgba(43, 42, 42, 0.821);
+}
+
+.content h2 {
+  font-size: 1.6em;
+  color: rgba(206, 50, 50, 0.861);
 }
 
 .content > .wrap{
@@ -60,11 +73,11 @@
   padding: .4em 0;
   background: rgba(41, 54, 54, 0.181);
   text-align: center;
-  font-size: .8em;
+  font-size: .9em;
 }
 
 /* 裝飾  */
-h2 {
+.content h2 {
   position: relative;
   padding: .8em 0 .3em 0;
 }
