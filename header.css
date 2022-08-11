@@ -118,6 +118,11 @@ header ul li:hover {
   text-align: center;
   padding: .7em 0;
 }
+
+#stretchBlock > a:last-child {
+  padding-bottom: 1.7em;
+}
+
 #stretchBlock > a:hover {
   background: rgba(21, 20, 20, 0.27);
   color: #fff;

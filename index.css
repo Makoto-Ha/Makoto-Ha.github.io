@@ -2,6 +2,7 @@
 .slideShow {
   max-width: 1200px;
   margin: 0 auto;
+  padding-bottom: .8em;
 }
 .slideShow .wrap{
   width: 100%;
@@ -90,7 +91,7 @@
 /* 裝飾  */
 .content h2 {
   position: relative;
-  padding: .8em 0 .3em 0;
+  padding-bottom: .3em;
 }
 
 /* article的h2文字體下面的底線 */
