@@ -213,7 +213,7 @@
         </div>
         <div class="display" style="display: none">
           <ul>
-            <li><a href="#">會議室</a></li>
+            <li><a href="office.html">會議室</a></li>
             <li><a href="refinement.html">精煉室</a></li>
             <li><a href="#">成型區</a></li>
             <li><a href="#">沖孔區</a></li>
@@ -230,8 +230,8 @@
       <div class="option">
         <h3>Factory</h3>
         <ul>
-          <li><span>▶</span><a href="#">會議室</a></li>
-          <li><span>▶</span><a href="#">精煉室</a></li>
+          <li><span>▶</span><a href="office.html">會議室</a></li>
+          <li><span>▶</span><a href="refinement.html">精煉室</a></li>
           <li><span>▶</span><a href="#">成型區</a></li>
           <li><span>▶</span><a href="#">沖孔區</a></li>
           <li><span>▶</span><a href="#">檢驗區</a></li>
@@ -283,7 +283,7 @@
   });
   //720px下拉選單
   let optionLis = [...document.querySelectorAll('.factory .wrap ul li')];
-  let paths = ['#', 'refinement.html', '#', '#', '#', '#'];
+  let paths = ['office.html', 'refinement.html', '#', '#', '#', '#'];
   optionLis.forEach((li, i) => {
     li.addEventListener('click', () => {
       location.href = paths[i];

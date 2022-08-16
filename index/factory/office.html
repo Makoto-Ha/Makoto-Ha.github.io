@@ -3,10 +3,10 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="icon" href="../img/langzhiLogo.JPG" type="image/icon type">
-   <link rel="stylesheet" href="../header.css">
-   <link rel="stylesheet" href="../index.css">
-   <link rel="stylesheet" href="../rwd.css">
+   <link rel="icon" href="../../img/langzhiLogo.JPG" type="image/icon type">
+   <link rel="stylesheet" href="../../header.css">
+   <link rel="stylesheet" href="../../index.css">
+   <link rel="stylesheet" href="../../rwd.css">
    <title>title</title>
    <style>
     /* 選單 */
@@ -108,24 +108,28 @@
     .office > div {
       width: 100%;
       display: flex;
+      justify-content: center;
       align-items: center;
       flex-wrap: wrap;
-      background:linear-gradient(45deg, rgba(58, 5, 249, 0.93) 50%,rgba(238, 246, 9, 0.93) 50%);
+      background:linear-gradient(45deg, rgba(108, 86, 251, 0.93) 50%,rgba(253, 255, 112, 0.93) 50%);
     }
     .office img {
       width: 50%;
     }
-    .office span {
-      display: block;
+    .office div div {
       width: 50%;
-      text-align: center;
-      font-size: 2em;
+      display: flex;
+      justify-content: center;
     }
-    .office span:nth-child(2) {
-      color: rgba(58, 5, 249);
+    .office div div span {
+      width: 80%;
+      font-size: 1.5em;
     }
-    .office span:nth-child(1) {
-      color: rgba(238, 246, 9);
+    .office div div:nth-child(2) span {
+      color: rgb(55, 0, 255)
+    }
+    .office div div:nth-child(1) span {
+      color: rgb(253, 255, 112, 0.93);
     }
     .footer {
       width: 100%;
@@ -154,8 +158,16 @@
       .office > div:not(:nth-of-type(2n)) {
         flex-direction: column-reverse;
       }
-      .office > div:nth-child(2n) > span {
-        color: rgba(58, 5, 249);
+      .office > div > div:nth-child(1) span {
+        color: rgba(58, 5, 249, 0.93);
+      }
+      .office > div {
+        justify-content: flex-end;
+        align-items: flex-end;
+      }
+      .office > div > div {
+        width: 90%;
+        justify-content: flex-end;
       }
       .office img {
         width: 100%;
@@ -172,12 +184,12 @@
 <body>
   <header>
     <div>
-      <a href="../index.html"><img src="../img/langzhiLogo.JPG" alt="langzhiLogo"></a>
-      <a href="../index.html"><h1>朗智科技有限公司</h1></a>
+      <a href="../../index.html"><img src="../../img/langzhiLogo.JPG" alt="langzhiLogo"></a>
+      <a href="../../index.html"><h1>朗智科技有限公司</h1></a>
     </div>
     <ul>
-      <li><a href="../index.html"><h1>首頁</h1></a></li>
-      <li><a href="factory.html"><h1>廠區目錄</h1></a></li>
+      <li><a href="../../index.html"><h1>首頁</h1></a></li>
+      <li><a href="../factory.html"><h1>廠區目錄</h1></a></li>
       <li><a href="#"><h1>研發技術</h1></a></li>
       <li><a href="#"><h1>品質認證</h1></a></li>
       <li></li>
@@ -185,8 +197,8 @@
   </header>
    <!-- 按鈕切換用div -->
   <div id="stretchBlock" style="display: none;">
-    <a href="../index.html">首頁</a>
-    <a href="factory.html">廠區目錄</a>
+    <a href="../../index.html">首頁</a>
+    <a href="../factory.html">廠區目錄</a>
     <a href="#">研發技術</a>
     <a href="#">品質認證</a>
     <a href="#">投資者專區</a>
@@ -201,8 +213,8 @@
         </div>
         <div class="display" style="display: none">
           <ul>
-            <li><a href="factory/office.html">會議室</a></li>
-            <li><a href="factory/refinement.html">精煉室</a></li>
+            <li><a href="office.html">會議室</a></li>
+            <li><a href="refinement.html">精煉室</a></li>
             <li><a href="#">成型區</a></li>
             <li><a href="#">沖孔區</a></li>
             <li><a href="#">檢驗區</a></li>    
@@ -218,8 +230,8 @@
       <div class="option">
         <h3>Factory</h3>
         <ul>
-          <li><span>▶</span><a href="factory/office.html">會議室</a></li>
-          <li><span>▶</span><a href="factory/refinement.html">精煉室</a></li>
+          <li><span>▶</span><a href="office.html">會議室</a></li>
+          <li><span>▶</span><a href="refinement.html">精煉室</a></li>
           <li><span>▶</span><a href="#">成型區</a></li>
           <li><span>▶</span><a href="#">沖孔區</a></li>
           <li><span>▶</span><a href="#">檢驗區</a></li>
@@ -228,27 +240,27 @@
       </div>
       <div class="office">
         <div>
-          <img src="img/office.jpg" alt="office">
-          <span>會議室</span>
+          <img src="img/office01.jpg" alt="office">
+          <div><span>開會決策擬定品質目標</span></div>
         </div>
         <div>
-          <span>精煉室</span>
-          <img src="img/refinement.jpg" alt="refinement">
+          <div><span>客戶需求評估並回報估價結果</span></div>
+          <img src="img/office02.jpg" alt="refinement">
         </div>
         <div>
-          <img src="img/molding.jpg" alt="molding">
-          <span>成形區</span>
+          <img src="img/office03.jpg" alt="molding">
+          <div><span>客戶協調模具回廠時間與安排生產及客戶領料時間</span></div>
         </div>
         <div>
-          <span>沖孔區</span>
-          <img src="img/punching.jpg" alt="punching">
+          <div><span>試模完成進行標準檢驗並即時反應客戶</span></div>
+          <img src="img/office04.jpg" alt="punching">
         </div>
       </div>
     </div>
   </section>
   <section class="footer">251新北市淡水區奎柔山路100之6號 +886-2625-0555</section>
 </body>
-<script src="../rwd.js"></script>
+<script src="../../rwd.js"></script>
 <script>
   // 1024px以下中間上面會出現下拉選單
   document.querySelector('.factory .wrap > div:nth-child(1)').addEventListener('click', () => {
@@ -261,7 +273,7 @@
   let optionAs = [...document.querySelectorAll('.option > ul li a')];
   let optionSpan = [...document.querySelectorAll('.option > ul li span')];
   let events = ['mouseover', 'mouseout'];
-  // 1024px左側選單互動
+  // 左側選單互動
   optionAs.forEach((a, i) => {
     events.forEach(event => {
       a.addEventListener(event, () => {
@@ -271,13 +283,12 @@
   });
   //720px下拉選單
   let optionLis = [...document.querySelectorAll('.factory .wrap ul li')];
-  let paths = ['factory/office.html', 'factory/refinement.html', '#', '#', '#', '#'];
+  let paths = ['office.html', 'refinement.html', '#', '#', '#', '#'];
   optionLis.forEach((li, i) => {
     li.addEventListener('click', () => {
       location.href = paths[i];
     })
   })
-
 
 </script>
 </html>
