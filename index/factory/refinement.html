@@ -30,6 +30,7 @@
       list-style-type: none;
       border-top: 1px solid rgba(102, 98, 98, 0.212);
       padding: .3em;
+      cursor: pointer;
     }
     .factory .display li a{
       padding-left: .5em;
@@ -109,7 +110,7 @@
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
-      background:linear-gradient(45deg, rgba(58, 5, 249, 0.93) 50%,rgba(238, 246, 9, 0.924) 50%);
+      background:linear-gradient(45deg, rgba(108, 86, 251, 0.93) 50%,rgba(253, 255, 112, 0.93) 50%);
     }
     .office img {
       width: 50%;
@@ -125,10 +126,10 @@
       font-size: 1.5em;
     }
     .office div div:nth-child(2) span {
-      color: rgba(58, 5, 249, 0.93);
+      color: rgb(55, 0, 255)
     }
     .office div div:nth-child(1) span {
-      color: rgba(238, 246, 9, 0.924);
+      color: rgb(253, 255, 112, 0.93);
     }
     .footer {
       width: 100%;
@@ -272,10 +273,14 @@
       });
     });
   });
+  //720px下拉選單
+  let optionLis = [...document.querySelectorAll('.factory .wrap ul li')];
+  let paths = ['refinement.html', '#', '#', '#', '#', '#'];
+  optionLis.forEach((li, i) => {
+    li.addEventListener('click', () => {
+      location.href = paths[i];
+    })
+  })
 
-  // document.querySelector('.option li > a').addEventListener('click', (e) => {
-  //   document.querySelector('.office div img').src = '/img/refinement.jpg';
-  //   e.preventDefault();
-  // });
 </script>
 </html>

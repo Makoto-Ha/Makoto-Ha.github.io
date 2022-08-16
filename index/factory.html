@@ -30,6 +30,7 @@
       list-style-type: none;
       border-top: 1px solid rgba(102, 98, 98, 0.212);
       padding: .3em;
+      cursor: pointer;
     }
     .factory .display li a{
       padding-left: .5em;
@@ -108,7 +109,7 @@
       display: flex;
       align-items: center;
       flex-wrap: wrap;
-      background:linear-gradient(45deg, rgba(58, 5, 249, 0.93) 50%,rgba(238, 246, 9, 0.924) 50%);
+      background:linear-gradient(45deg, rgba(58, 5, 249, 0.93) 50%,rgba(238, 246, 9, 0.93) 50%);
     }
     .office img {
       width: 50%;
@@ -120,10 +121,10 @@
       font-size: 2em;
     }
     .office span:nth-child(2) {
-      color: rgba(58, 5, 249, 0.93);
+      color: rgba(58, 5, 249);
     }
     .office span:nth-child(1) {
-      color: rgba(238, 246, 9, 0.924);
+      color: rgba(238, 246, 9);
     }
     .footer {
       width: 100%;
@@ -153,7 +154,7 @@
         flex-direction: column-reverse;
       }
       .office > div:nth-child(2n) > span {
-        color: rgba(58, 5, 249, 0.93);
+        color: rgba(58, 5, 249);
       }
       .office img {
         width: 100%;
@@ -199,7 +200,7 @@
         </div>
         <div class="display" style="display: none">
           <ul>
-            <li><a href="#">精煉室</a></li>
+            <li><a href="factory/refinement.html">精煉室</a></li>
             <li><a href="#">成形區</a></li>
             <li><a href="#">沖孔區</a></li>
             <li><a href="#">檢驗區</a></li>
@@ -259,7 +260,7 @@
   let optionAs = [...document.querySelectorAll('.option > ul li a')];
   let optionSpan = [...document.querySelectorAll('.option > ul li span')];
   let events = ['mouseover', 'mouseout'];
-  // 左側選單互動
+  // 1024px左側選單互動
   optionAs.forEach((a, i) => {
     events.forEach(event => {
       a.addEventListener(event, () => {
@@ -267,10 +268,15 @@
       });
     });
   });
+  //720px下拉選單
+  let optionLis = [...document.querySelectorAll('.factory .wrap ul li')];
+  let paths = ['factory/refinement.html', '#', '#', '#', '#', '#'];
+  optionLis.forEach((li, i) => {
+    li.addEventListener('click', () => {
+      location.href = paths[i];
+    })
+  })
 
-  // document.querySelector('.option li > a').addEventListener('click', (e) => {
-  //   document.querySelector('.office div img').src = '/img/refinement.jpg';
-  //   e.preventDefault();
-  // });
+
 </script>
 </html>
