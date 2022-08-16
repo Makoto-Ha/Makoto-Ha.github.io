@@ -3,9 +3,9 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="../header.css">
-   <link rel="stylesheet" href="../index.css">
-   <link rel="stylesheet" href="../rwd.css">
+   <link rel="stylesheet" href="../../header.css">
+   <link rel="stylesheet" href="../../index.css">
+   <link rel="stylesheet" href="../../rwd.css">
    <title>title</title>
    <style>
     /* 選單 */
@@ -106,6 +106,7 @@
     .office > div {
       width: 100%;
       display: flex;
+      justify-content: center;
       align-items: center;
       flex-wrap: wrap;
       background:linear-gradient(45deg, rgba(58, 5, 249, 0.93) 50%,rgba(238, 246, 9, 0.924) 50%);
@@ -113,16 +114,20 @@
     .office img {
       width: 50%;
     }
-    .office span {
-      display: block;
+    .office div div {
       width: 50%;
-      text-align: center;
-      font-size: 2em;
+      /* padding: .2em; */
+      display: flex;
+      justify-content: center;
     }
-    .office span:nth-child(2) {
+    .office div div span {
+      width: 80%;
+      font-size: 1.5em;
+    }
+    .office div div:nth-child(2) span {
       color: rgba(58, 5, 249, 0.93);
     }
-    .office span:nth-child(1) {
+    .office div div:nth-child(1) span {
       color: rgba(238, 246, 9, 0.924);
     }
     .footer {
@@ -152,7 +157,7 @@
       .office > div:not(:nth-of-type(2n)) {
         flex-direction: column-reverse;
       }
-      .office > div:nth-child(2n) > span {
+      .office > div > div:nth-child(1) span {
         color: rgba(58, 5, 249, 0.93);
       }
       .office img {
@@ -170,12 +175,12 @@
 <body>
   <header>
     <div>
-      <a href="../index.html"><img src="../img/langzhiLogo.JPG" alt="langzhiLogo"></a>
-      <a href="../index.html"><h1>朗智科技有限公司</h1></a>
+      <a href="../../index.html"><img src="../../img/langzhiLogo.JPG" alt="langzhiLogo"></a>
+      <a href="../../index.html"><h1>朗智科技有限公司</h1></a>
     </div>
     <ul>
-      <li><a href="../index.html"><h1>首頁</h1></a></li>
-      <li><a href="factory.html"><h1>廠區目錄</h1></a></li>
+      <li><a href="../../index.html"><h1>首頁</h1></a></li>
+      <li><a href="../factory.html"><h1>廠區目錄</h1></a></li>
       <li><a href="#"><h1>研發技術</h1></a></li>
       <li><a href="#"><h1>品質認證</h1></a></li>
       <li></li>
@@ -183,8 +188,8 @@
   </header>
    <!-- 按鈕切換用div -->
   <div id="stretchBlock" style="display: none;">
-    <a href="../index.html">首頁</a>
-    <a href="factory.html">廠區目錄</a>
+    <a href="../../index.html">首頁</a>
+    <a href="../factory.html">廠區目錄</a>
     <a href="#">研發技術</a>
     <a href="#">品質認證</a>
     <a href="#">投資者專區</a>
@@ -217,7 +222,7 @@
         <h3>Factory</h3>
         <ul>
           <li><span>▶</span><a href="#">會議室</a></li>
-          <li><span>▶</span><a href="factory/refinement.html">精煉室</a></li>
+          <li><span>▶</span><a href="#">精煉室</a></li>
           <li><span>▶</span><a href="#">成型區</a></li>
           <li><span>▶</span><a href="#">沖孔區</a></li>
           <li><span>▶</span><a href="#">檢驗區</a></li>
@@ -226,27 +231,27 @@
       </div>
       <div class="office">
         <div>
-          <img src="../img/office.jpg" alt="office">
-          <span>會議室</span>
+          <img src="../../img/office.jpg" alt="office">
+          <div><span>依精煉排承擔數量或客戶生產計劃表準備原料</span></div>
         </div>
         <div>
-          <span>精煉室</span>
-          <img src="../img/refinement.jpg" alt="refinement">
+          <div><span>依需領原料填寫至料品庫存管制表</span></div>
+          <img src="../../img/refinement.jpg" alt="refinement">
         </div>
         <div>
-          <img src="../img/molding.jpg" alt="molding">
-          <span>成形區</span>
+          <img src="../../img/molding.jpg" alt="molding">
+          <div><span>依料品精煉規格表內之規格混料</span></div>
         </div>
         <div>
-          <span>沖孔區</span>
-          <img src="../img/punching.jpg" alt="punching">
+          <div><span>依料品精煉規格表內之規格切成用料尺寸及條數</span></div>
+          <img src="../../img/punching.jpg" alt="punching">
         </div>
       </div>
     </div>
   </section>
   <section class="footer">251新北市淡水區奎柔山路100之6號 +886-2625-0555</section>
 </body>
-<script src="../rwd.js"></script>
+<script src="../../rwd.js"></script>
 <script>
   // 1024px以下中間上面會出現下拉選單
   document.querySelector('.factory .wrap > div:nth-child(1)').addEventListener('click', () => {
