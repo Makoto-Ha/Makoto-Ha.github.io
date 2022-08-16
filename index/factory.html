@@ -201,11 +201,11 @@
         </div>
         <div class="display" style="display: none">
           <ul>
-            <li><a href="factory/refinement.html">精煉室</a></li>
-            <li><a href="#">成形區</a></li>
+            <li><a href="factory/refinement.html">會議室</a></li>
+            <li><a href="#">精煉室</a></li>
+            <li><a href="#">成型區</a></li>
             <li><a href="#">沖孔區</a></li>
-            <li><a href="#">檢驗區</a></li>
-            <li><a href="#">會議室</a></li>    
+            <li><a href="#">檢驗區</a></li>    
             <li><a href="#">辦公室</a></li>
           </ul>
         </div>
@@ -271,7 +271,7 @@
   });
   //720px下拉選單
   let optionLis = [...document.querySelectorAll('.factory .wrap ul li')];
-  let paths = ['factory/refinement.html', '#', '#', '#', '#', '#'];
+  let paths = ['#', 'factory/refinement.html', '#', '#', '#', '#'];
   optionLis.forEach((li, i) => {
     li.addEventListener('click', () => {
       location.href = paths[i];
