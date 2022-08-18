@@ -2,21 +2,20 @@
   margin: 0;
   padding: 0;
 }
-/* @font-face {
-  font-family: 'cwTeXYen';
+@font-face {
+  font-family: 'Noto Sans TC';
   font-style: normal;
-  font-weight: 500;
-  src: url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.eot);
-  src: url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.eot?#iefix) format('embedded-opentype'),
-       url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.woff2) format('woff2'),
-       url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.woff) format('woff'),
-       url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.ttf) format('truetype');
-} */
+  font-weight: 300;
+  src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Light.woff2) format('woff2'),
+       url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Light.woff) format('woff'),
+       url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Light.otf) format('opentype');
+  font-display: fallback;
+}
 html {
   height: 100%;
 }
 body {
-  font-family: cwTeXYen;
+  font-family: 'Noto Sans TC',sans-serif !important;
   background-color: #ffffff;
   opacity: 1;
   background-image:  linear-gradient(#fafafa 2px, transparent 2px), linear-gradient(to right, #fafafa 2px, #ffffff 2px);
