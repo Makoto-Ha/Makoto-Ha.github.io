@@ -112,8 +112,18 @@
       flex-wrap: wrap;
       background:linear-gradient(45deg, rgba(58, 5, 249, 0.93) 50%,rgba(238, 246, 9, 0.93) 50%);
     }
-    .office img {
+    .office .imgWrap {
+      position: relative;
       width: 50%;
+      padding-top: 30%;
+    }
+    .office img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
     }
     .office span {
       display: block;
@@ -157,13 +167,15 @@
       .office > div:nth-child(2n) > span {
         color: rgba(58, 5, 249);
       }
+      .office .imgWrap {
+        width: 100%;
+        padding-top: 60%;
+      }
       .office img {
         width: 100%;
-        height: 50%;
       }
       .office span {
         width: 100%;
-        height: 50%;
         padding: .3em 0;
       }
       .office div div span {
@@ -231,20 +243,24 @@
       </div>
       <div class="office">
         <div>
-          <img src="img/office.webp" alt="office">
+          <div class="imgWrap"><img src="img/office.webp" alt="office"></div>
+          
           <span>會議室</span>
         </div>
         <div>
           <span>精煉室</span>
-          <img src="img/refinement.webp" alt="refinement">
+          <div class="imgWrap"><img src="img/refinement.webp" alt="refinement"></div>
+          
         </div>
         <div>
-          <img src="img/molding.webp" alt="molding">
+          <div class="imgWrap"><img src="img/molding.webp" alt="molding"></div>
+          
           <span>成形區</span>
         </div>
         <div>
           <span>沖孔區</span>
-          <img src="img/punching.webp" alt="punching">
+          <div class="imgWrap"><img src="img/punching.webp" alt="punching"></div>
+          
         </div>
       </div>
     </div>
