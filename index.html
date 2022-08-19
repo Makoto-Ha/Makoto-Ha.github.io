@@ -41,6 +41,11 @@
         <img src="img/slideimg3.webp" alt="slideimg3">
         <img src="img/slide.webp" alt="slide">
       </div>
+      <div class="imgSwitch">
+        <span class="targetColor"></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
   </section>
 
@@ -84,26 +89,45 @@
 <script src="rwd.js"></script>
 <script>
   const imgs = document.querySelectorAll('.slideShow > .wrap > .imgs img');
-  let count = 0;
-  let time;
+  const switchs = [...document.querySelectorAll('.imgSwitch > span')];
+  let move = 0, time, stop;
   // 輪播圖
-  setInterval(() => {
-    if(!time) {
-      time = setInterval(() => {
-        if(count === (imgs.length-1) * 1200) { // 當移動到最後一張圖時 
-          imgs.forEach(img => img.style.right = 0); // 把最後一張圖設為第一張
-          count = 0;
-        }
+  let start = () => {
+    stop = setInterval(() => {
+      if(!time) {
+        time = setInterval(() => {
+          if(move === (imgs.length-1) * 1200) { // 當移動到最後一張圖時 
+            imgs.forEach(img => img.style.right = 0); // 把最後一張圖設為第一張
+            move = 0;
+          }
 
-        count += 10;
-        imgs.forEach(img => img.style.right = `${count}px`);
-        if(count % 1200 === 0) {
-          clearInterval(time);
-          time = null;
-        }
+          move += 10;
+          imgs.forEach(img => img.style.right = `${move}px`);
+          if(move % 1200 === 0) {
+            switchs.forEach(sw => sw.classList.remove('targetColor')); // 到下一張後先把按鈕顏色先全清
+            switchs[move / 1200] || switchs[0].classList.add('targetColor'); // 已經沒有圖片了，所以把第一個按鈕上色
+            if(move / 1200 < switchs.length) { // 陣列長度不能和length一樣不然會變undefined
+              switchs[move / 1200].classList.add('targetColor'); // 如果移動到下一張圖就把按鈕上色
+            }
+            clearInterval(time);
+            time = null;
+          }
 
-      }, 5); 
-    }  
-  }, 4500);
+        }, 5); 
+      }  
+    }, 4500);
+  }
+  start();
+  // 按鈕切換
+  switchs.forEach((sw, i) => {
+    sw.addEventListener('click', (e) => {
+      imgs.forEach(img => img.style.right = `${1200 * i}px`); // 按下去偏移圖片到目標圖片
+      move = 1200 * i; // 把偏移距離保存起來，用於下次開啟定時器
+      switchs.forEach(sw => sw.classList.remove('targetColor')); // 清空全部按鈕顏色
+      e.target.classList.add('targetColor'); // 點擊按鈕上色
+      clearInterval(stop); // 停止移動圖片的定時器，用於讓秒數刷新
+      start(); // 再次開啟移動圖片定時器
+    })
+  })
 </script>
 </html>

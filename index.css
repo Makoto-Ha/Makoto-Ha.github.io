@@ -7,6 +7,7 @@
 .slideShow .wrap{
   width: 100%;
   overflow: hidden;
+  position: relative;
 }
 .slideShow .wrap .imgs{
   width: 100%;
@@ -15,6 +16,31 @@
 /* 這裡shrink防止圖片因為flex收縮變形 */
 .slideShow .wrap .imgs img {
   flex-shrink: 0;
+}
+/* slideShow的切換按鈕 */
+.imgSwitch {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 100px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto 3px auto;
+}
+.imgSwitch > span {
+  background: rgba(30, 30, 30, 0.5);
+  border-radius: 100%;
+  width: 1.2em;
+  height: 1.2em;
+  margin: 0 .3em;
+  cursor: pointer;
+}
+.imgSwitch > .targetColor{
+  background: rgba(30, 30, 30, .8);
+}
+.imgSwitch > span:hover{
+  background: rgba(30, 30, 30, .8);
 }
 
 /* 內容 */
