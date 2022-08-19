@@ -1,21 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&display=swap');
 * {
   margin: 0;
   padding: 0;
 }
-@font-face {
+/* @font-face {
   font-family: 'Noto Sans TC';
   font-style: normal;
   font-weight: 300;
   src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Light.woff2) format('woff2'),
        url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Light.woff) format('woff'),
        url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Light.otf) format('opentype');
-  font-display: fallback;
-}
+  font-display: swap;
+} */
 html {
   height: 100%;
 }
 body {
-  font-family: 'Noto Sans TC',sans-serif !important;
+  font-family: 'Noto Sans TC', sans-serif;
   background-color: #ffffff;
   opacity: 1;
   background-image:  linear-gradient(#fafafa 2px, transparent 2px), linear-gradient(to right, #fafafa 2px, #ffffff 2px);
