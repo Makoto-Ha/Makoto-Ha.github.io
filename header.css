@@ -3,15 +3,6 @@
   margin: 0;
   padding: 0;
 }
-/* @font-face {
-  font-family: 'Noto Sans TC';
-  font-style: normal;
-  font-weight: 300;
-  src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Light.woff2) format('woff2'),
-       url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Light.woff) format('woff'),
-       url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Light.otf) format('opentype');
-  font-display: swap;
-} */
 html {
   height: 100%;
 }
@@ -24,7 +15,6 @@ body {
   height: 100%;
 }
 /* 導覽列 */
-/* position是為了讓z-index生效 */
 header{
   width: 100%;
   display: flex;
@@ -32,8 +22,6 @@ header{
   margin-bottom: 1em;
   background: #fff;
   box-shadow: 1px 2px 15px rgba(132, 131, 131, 0.218);
-  position: relative;
-  z-index: 10;
 }
 /* 導覽列左邊 */
 header div:nth-child(1) {
@@ -48,20 +36,20 @@ header img {
   width: 2.4em;
   height: 1.5em;
 }
-header div h1{
+header div a{
   font-size: 20px;
   font-weight: 800;
   padding-left: .3em;
   color: rgb(58, 77, 249);
 }
 /* 導導覽列右邊 */
-header ul{
+header ul {
   width: 75%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
-header ul li{
+header ul li {
   display: flex;
   align-items: center;
   font-size: 18px;
@@ -72,14 +60,15 @@ header ul li{
   padding: .02em .5em;
 }
 
+header ul li h1 > a {
+  display: block;
+  line-height: 4em;
+}
+
 /* 個別數值調整 */
 a {
   text-decoration: none;
-}
-
-a:hover {
-  color: blue;
-  transition: .3s;
+  color: rgba(36, 35, 35, 0.848);
 }
 
 img {
@@ -90,11 +79,10 @@ img {
 h1 {
   font-size: 18px;
   font-weight: 500;
-  color: rgba(36, 35, 35, 0.848)
 }
 
 /* 裝飾  */
-header ul li:hover h1{
+header ul li:hover h1 > a{
   color: rgb(255, 255, 255);
   transition: .3s;
 }

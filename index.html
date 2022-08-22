@@ -13,13 +13,13 @@
   <header>
     <div>
       <a href="index.html"><img src="img/langzhiLogo.webp" alt="langzhiLogo"></a>
-      <a href="index.html"><h1>朗智科技有限公司</h1></a>
+      <h1><a href="index.html">朗智科技有限公司</a></h1>
     </div>
     <ul>
-      <li><a href="index.html"><h1>首頁</h1></a></li>
-      <li><a href="index/factory.html"><h1>廠區目錄</h1></a></li>
-      <li><a href="#"><h1>研發技術</h1></a></li>
-      <li><a href="#"><h1>品質認證</h1></a></li>
+      <li><h1><a href="index.html">首頁</a></h1></li>
+      <li><h1><a href="index/factory.html">廠區目錄</a></h1></li>
+      <li><h1><a href="#">研發技術</a></h1></li>
+      <li><h1><a href="#">品質認證</a></h1></li>
       <li></li>
     </ul>
   </header>
@@ -93,7 +93,7 @@
   let move = 0, time, stop;
   // 輪播圖
   let start = () => {
-    stop = setInterval(() => {
+    let animate = () => {
       if(!time) {
         time = setInterval(() => {
           if(move === (imgs.length-1) * 1200) { // 當移動到最後一張圖時 
@@ -115,7 +115,8 @@
 
         }, 5); 
       }  
-    }, 4500);
+    }
+    stop = setInterval(animate, 4500);
   }
   start();
   // 按鈕切換
@@ -125,6 +126,8 @@
       move = 1200 * i; // 把偏移距離保存起來，用於下次開啟定時器
       switchs.forEach(sw => sw.classList.remove('targetColor')); // 清空全部按鈕顏色
       e.target.classList.add('targetColor'); // 點擊按鈕上色
+      time && clearInterval(time);
+      time = null;
       clearInterval(stop); // 停止移動圖片的定時器，用於讓秒數刷新
       start(); // 再次開啟移動圖片定時器
     })

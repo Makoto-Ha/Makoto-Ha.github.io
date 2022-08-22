@@ -50,7 +50,7 @@
     padding: 0;
     background: rgba(70, 67, 67, 0.801);
   }
-  header ul li a{
+  header ul li h1 > a{
     display: none;
   }
   header ul li:nth-child(2n+2) {
@@ -63,7 +63,6 @@
   }
   .content .article1 {
     flex-direction: column;
-    /* padding-top: 5em; */
   }
   .content .article1 > div {
     width: 100%;
