@@ -64,14 +64,13 @@ header ul li {
   font-size: 18px;
   height: 100%;
   letter-spacing: 1px;
-  line-height: 2em;
+  line-height: 4em;
   list-style-type: none;
-  padding: .02em .5em;
+  padding: 0 .5em;
 }
 
 header ul li h1 > a {
   display: block;
-  line-height: 4em;
 }
 
 /* 個別數值調整 */
@@ -96,7 +95,7 @@ header ul li:hover h1 > a{
   transition: .3s;
 }
 
-header ul li:hover {
+header ul li:not(:nth-child(5)):hover { /* 第五個ul不變色 */
   background: rgba(102, 101, 101, 0.606);
   transition: .3s;
 }

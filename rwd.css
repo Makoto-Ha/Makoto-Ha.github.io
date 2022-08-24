@@ -3,7 +3,6 @@
   header ul li{
     font-size: 16px;
     letter-spacing: 0;
-    line-height: 1.5em;
   }
   .slideShow { /* 把上方padding-top去掉 */
     padding-top: 0;
