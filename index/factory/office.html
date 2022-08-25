@@ -229,7 +229,7 @@
           <ul>
             <li><a href="office.html">會議室</a></li>
             <li><a href="refinement.html">精煉室</a></li>
-            <li><a href="#">成型區</a></li>
+            <li><a href="molding.html">成型區</a></li>
             <li><a href="#">沖孔區</a></li>
             <li><a href="qc.html">檢驗區</a></li>    
             <li><a href="#">辦公室</a></li>
@@ -246,7 +246,7 @@
         <ul>
           <li><span>▶</span><a href="office.html">會議室</a></li>
           <li><span>▶</span><a href="refinement.html">精煉室</a></li>
-          <li><span>▶</span><a href="#">成型區</a></li>
+          <li><span>▶</span><a href="molding.html">成型區</a></li>
           <li><span>▶</span><a href="#">沖孔區</a></li>
           <li><span>▶</span><a href="qc.html">檢驗區</a></li>
           <li><span>▶</span><a href="#">辦公室</a></li>
@@ -254,20 +254,20 @@
       </div>
       <div class="office">
         <div>
-          <div class="imgWrap"><img src="img/office01.webp" alt="office"></div>
+          <div class="imgWrap"><img src="img/office01.webp" alt="office01"></div>
           <div><span>開會決策擬定品質目標</span></div>
         </div>
         <div>
           <div><span>客戶需求評估並回報估價結果</span></div>
-          <div class="imgWrap"><img src="img/office02.webp" alt="refinement"></div>
+          <div class="imgWrap"><img src="img/office02.webp" alt="office02"></div>
         </div>
         <div>
-          <div class="imgWrap"><img src="img/office03.webp" alt="molding"></div>
+          <div class="imgWrap"><img src="img/office03.webp" alt="office03"></div>
           <div><span>客戶協調模具回廠時間與安排生產及客戶領料時間</span></div>
         </div>
         <div>
           <div><span>試模完成進行標準檢驗並即時反應客戶</span></div>
-          <div class="imgWrap"><img src="img/office04.webp" alt="punching"></div>
+          <div class="imgWrap"><img src="img/office04.webp" alt="office04"></div>
         </div>
       </div>
     </div>
@@ -297,7 +297,7 @@
   });
   //1024px後的下拉選單
   let optionLis = [...document.querySelectorAll('.factory .wrap ul li')];
-  let paths = ['office.html', 'refinement.html', '#', '#', 'qc.html', '#'];
+  let paths = ['office.html', 'refinement.html', 'molding.html', '#', 'qc.html', '#'];
   optionLis.forEach((li, i) => {
     li.addEventListener('click', () => {
       location.href = paths[i];

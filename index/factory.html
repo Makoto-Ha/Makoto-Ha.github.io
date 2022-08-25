@@ -224,7 +224,7 @@
           <ul>
             <li><a href="factory/office.html">會議室</a></li>
             <li><a href="factory/refinement.html">精煉室</a></li>
-            <li><a href="#">成型區</a></li>
+            <li><a href="factory/molding.html">成型區</a></li>
             <li><a href="#">沖孔區</a></li>
             <li><a href="factory/qc.html">檢驗區</a></li>    
             <li><a href="#">辦公室</a></li>
@@ -241,7 +241,7 @@
         <ul>
           <li><span>▶</span><a href="factory/office.html">會議室</a></li>
           <li><span>▶</span><a href="factory/refinement.html">精煉室</a></li>
-          <li><span>▶</span><a href="#">成型區</a></li>
+          <li><span>▶</span><a href="factory/molding.html">成型區</a></li>
           <li><span>▶</span><a href="#">沖孔區</a></li>
           <li><span>▶</span><a href="factory/qc.html">檢驗區</a></li>
           <li><span>▶</span><a href="#">辦公室</a></li>
@@ -258,7 +258,7 @@
         </div>
         <div>
           <div class="imgWrap"><img src="img/molding.webp" alt="molding"></div>
-          <span>成形區</span>
+          <span>成型區</span>
         </div>
         <div>
           <span>沖孔區</span>
@@ -292,7 +292,7 @@
   });
   //1024px後的下拉選單
   let optionLis = [...document.querySelectorAll('.factory .wrap ul li')];
-  let paths = ['factory/office.html', 'factory/refinement.html', '#', '#', 'factory/qc.html', '#'];
+  let paths = ['factory/office.html', 'factory/refinement.html', 'factory/molding.html', '#', 'factory/qc.html', '#'];
   optionLis.forEach((li, i) => {
     li.addEventListener('click', () => {
       location.href = paths[i];

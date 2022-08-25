@@ -230,9 +230,9 @@
           <ul>
             <li><a href="office.html">會議室</a></li>
             <li><a href="refinement.html">精煉室</a></li>
-            <li><a href="#">成型區</a></li>
+            <li><a href="molding.html">成型區</a></li>
             <li><a href="#">沖孔區</a></li>
-            <li><a href="#">檢驗區</a></li>    
+            <li><a href="qc.html">檢驗區</a></li>    
             <li><a href="#">辦公室</a></li>
           </ul>
         </div>
@@ -247,23 +247,23 @@
         <ul>
           <li><span>▶</span><a href="office.html">會議室</a></li>
           <li><span>▶</span><a href="refinement.html">精煉室</a></li>
-          <li><span>▶</span><a href="#">成型區</a></li>
+          <li><span>▶</span><a href="molding.html">成型區</a></li>
           <li><span>▶</span><a href="#">沖孔區</a></li>
-          <li><span>▶</span><a href="#">檢驗區</a></li>
+          <li><span>▶</span><a href="qc.html">檢驗區</a></li>
           <li><span>▶</span><a href="#">辦公室</a></li>
         </ul>
       </div>
       <div class="office">
         <div>
-          <div class="imgWrap"><img src="img/qc01.webp" alt="office"></div>
+          <div class="imgWrap"><img src="img/qc01.webp" alt="qc01"></div>
           <div><span>成型區與不良退貨</span></div>
         </div>
         <div>
           <div><span>空調舒爽的空間</span></div>
-          <div class="imgWrap"><img src="img/qc02.webp" alt="refinement"></div>
+          <div class="imgWrap"><img src="img/qc02.webp" alt="qc02"></div>
         </div>
         <div>
-          <div class="imgWrap"><img src="img/qc03.webp" alt="molding"></div>
+          <div class="imgWrap"><img src="img/qc03.webp" alt="qc03"></div>
           <div><span>合格的成型檢驗</span></div>
         </div>
       </div>
@@ -294,7 +294,7 @@
   });
   //1024px後的下拉選單
   let optionLis = [...document.querySelectorAll('.factory .wrap ul li')];
-  let paths = ['office.html', 'refinement.html', '#', '#', '#', '#'];
+  let paths = ['office.html', 'refinement.html', 'molding.html', '#', 'qc.html', '#'];
   optionLis.forEach((li, i) => {
     li.addEventListener('click', () => {
       location.href = paths[i];
