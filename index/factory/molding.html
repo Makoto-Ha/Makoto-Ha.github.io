@@ -231,7 +231,7 @@
             <li><a href="office.html">會議室</a></li>
             <li><a href="refinement.html">精煉室</a></li>
             <li><a href="molding.html">成型區</a></li>
-            <li><a href="#">沖孔區</a></li>
+            <li><a href="punching.html">沖孔區</a></li>
             <li><a href="qc.html">檢驗區</a></li>    
             <li><a href="#">辦公室</a></li>
           </ul>
@@ -248,7 +248,7 @@
           <li><span>▶</span><a href="office.html">會議室</a></li>
           <li><span>▶</span><a href="refinement.html">精煉室</a></li>
           <li><span>▶</span><a href="molding.html">成型區</a></li>
-          <li><span>▶</span><a href="#">沖孔區</a></li>
+          <li><span>▶</span><a href="punching.html">沖孔區</a></li>
           <li><span>▶</span><a href="qc.html">檢驗區</a></li>
           <li><span>▶</span><a href="#">辦公室</a></li>
         </ul>
@@ -294,7 +294,7 @@
   });
   //1024px後的下拉選單
   let optionLis = [...document.querySelectorAll('.factory .wrap ul li')];
-  let paths = ['office.html', 'refinement.html', 'molding.html', '#', 'qc.html', '#'];
+  let paths = ['office.html', 'refinement.html', 'molding.html', 'punching.html', 'qc.html', '#'];
   optionLis.forEach((li, i) => {
     li.addEventListener('click', () => {
       location.href = paths[i];
