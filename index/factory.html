@@ -211,7 +211,6 @@
     <a href="factory.html">廠區目錄</a>
     <a href="#">研發技術</a>
     <a href="#">品質認證</a>
-    <a href="#">投資者專區</a>
   </div> 
   <!-- ------------ -->
   <section id="factory">
@@ -227,7 +226,7 @@
             <li><a href="factory/refinement.html">精煉室</a></li>
             <li><a href="#">成型區</a></li>
             <li><a href="#">沖孔區</a></li>
-            <li><a href="#">檢驗區</a></li>    
+            <li><a href="factory/qc.html">檢驗區</a></li>    
             <li><a href="#">辦公室</a></li>
           </ul>
         </div>
@@ -244,30 +243,26 @@
           <li><span>▶</span><a href="factory/refinement.html">精煉室</a></li>
           <li><span>▶</span><a href="#">成型區</a></li>
           <li><span>▶</span><a href="#">沖孔區</a></li>
-          <li><span>▶</span><a href="#">檢驗區</a></li>
+          <li><span>▶</span><a href="factory/qc.html">檢驗區</a></li>
           <li><span>▶</span><a href="#">辦公室</a></li>
         </ul>
       </div>
       <div class="office">
         <div>
           <div class="imgWrap"><img src="img/office.webp" alt="office"></div>
-          
           <span>會議室</span>
         </div>
         <div>
           <span>精煉室</span>
           <div class="imgWrap"><img src="img/refinement.webp" alt="refinement"></div>
-          
         </div>
         <div>
           <div class="imgWrap"><img src="img/molding.webp" alt="molding"></div>
-          
           <span>成形區</span>
         </div>
         <div>
           <span>沖孔區</span>
           <div class="imgWrap"><img src="img/punching.webp" alt="punching"></div>
-          
         </div>
       </div>
     </div>
@@ -295,9 +290,9 @@
       });
     });
   });
-  //720px下拉選單
+  //1024px後的下拉選單
   let optionLis = [...document.querySelectorAll('.factory .wrap ul li')];
-  let paths = ['factory/office.html', 'factory/refinement.html', '#', '#', '#', '#'];
+  let paths = ['factory/office.html', 'factory/refinement.html', '#', '#', 'factory/qc.html', '#'];
   optionLis.forEach((li, i) => {
     li.addEventListener('click', () => {
       location.href = paths[i];
