@@ -107,17 +107,17 @@ header ul li:not(:nth-child(5)):hover { /* 第五個ul不變色 */
   height: 0;
   display: flex;
   flex-direction: column;
-  position: relative;
   transition: .3s;
 }
 #stretchBlock > a {
+  position: relative;
   font-size: 1.1em;
   width: 100%;
   text-align: center;
   padding: 12px 0;
   z-index: -1;
   opacity: 0;
-  transform: translateY(-192px);
+  top: -208px;
   transition: .3s;
 }
 #stretchBlock > a:hover {
@@ -141,11 +141,10 @@ ul > label { /* 選單點擊處 */
   z-index: -1;
 }
 #stretchCheck:checked + #stretchBlock{
-  height: 192px;
-  padding-bottom: 16px;
+  height: 208px;
 } 
 #stretchCheck:checked + #stretchBlock > a{
-  transform: translate(0);
+  top: 0;
   opacity: 100;
   z-index: 1;
 } 
