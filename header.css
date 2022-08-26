@@ -115,6 +115,8 @@ header ul li:not(:nth-child(5)):hover { /* 第五個ul不變色 */
   width: 100%;
   text-align: center;
   padding: 12px 0;
+  z-index: -1;
+  opacity: 0;
   transform: translateY(-192px);
   transition: .3s;
 }
@@ -144,5 +146,7 @@ ul > label { /* 選單點擊處 */
 } 
 #stretchCheck:checked + #stretchBlock > a{
   transform: translate(0);
+  opacity: 100;
+  z-index: 1;
 } 
 /* ---------------- */
