@@ -140,11 +140,28 @@ ul > label { /* 選單點擊處 */
   opacity: 0;
   z-index: -1;
 }
-#stretchCheck:checked + #stretchBlock{
+#stretchCheck:checked ~ #stretchBlock{
   height: 208px;
 } 
-#stretchCheck:checked + #stretchBlock > a{
+#stretchCheck:checked ~ #stretchBlock > a{
   top: 0;
   z-index: 1;
 } 
+/* 720px選單點擊後變為X */
+#stretchCheck:checked + header ul li:nth-child(3) {
+  display: none;
+}
+#stretchCheck:checked + header ul li:nth-child(1) {
+  transform:rotate(45deg);
+  position: absolute;
+  margin: 0;
+  transition: .5s;
+}
+#stretchCheck:checked + header ul li:nth-child(5) {
+  transform:rotate(-45deg);
+  position: absolute;
+  margin: 0;
+  transition: .5s;
+
+}
 /* ---------------- */
