@@ -148,20 +148,75 @@ ul > label { /* 選單點擊處 */
   z-index: 1;
 } 
 /* 720px選單點擊後變為X */
-#stretchCheck:checked + header ul li:nth-child(3) {
-  display: none;
+@keyframes menu720 {
+  from {
+    opacity: 100;
+  }
+  to {
+    opacity: 0;
+  }
 }
-#stretchCheck:checked + header ul li:nth-child(1) {
-  transform:rotate(45deg);
-  position: absolute;
-  margin: 0;
-  transition: .5s;
+@keyframes menu720-1 {
+  0% { 
+    transform: rotate(0deg);
+    top: -4px; 
+  }
+  50% { 
+    top: 8px; 
+  }
+  100% { 
+    transform: rotate(45deg);
+    top: 8px;
+   }
 }
-#stretchCheck:checked + header ul li:nth-child(5) {
-  transform:rotate(-45deg);
-  position: absolute;
-  margin: 0;
-  transition: .5s;
+@keyframes menu720-2 {
+  0% { 
+    transform: rotate(0deg);
+    bottom: -4px; 
+  }
+  50% { 
+    bottom: 8px;
+  }
+  100% { 
+    transform: rotate(-45deg);
+    bottom: 8px;
+  }
+}
 
+header ul .menu720{
+  animation: menu720 .3s forwards;
+}
+
+header ul .menu720-1 {
+  animation: menu720-1 .8s forwards;
+  margin: 0;
+}
+header ul .menu720-2 {
+  animation: menu720-2 .8s forwards;
+  margin: 0;
+}
+
+header ul .menu720-reverse {
+  animation: menu720 1s reverse forwards;
+}
+header ul .menu720-reverse-1 {
+  animation: menu720-1 .8s reverse forwards;
+  margin: 0;
+}
+header ul .menu720-reverse-2 {
+  animation: menu720-2 .8s reverse forwards;
+  margin: 0;
+}
+
+.newClass1 {
+  top: 12px;
+  transform: rotate(45deg);
+}
+.newClass2 {
+  bottom: 12px;
+  transform: rotate(-45deg);
+} 
+.newClass3 {
+  opacity: 0;
 }
 /* ---------------- */

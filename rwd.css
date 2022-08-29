@@ -44,10 +44,11 @@
     letter-spacing: 0;
     line-height: 0;
     width: 1.6em;
-    height: .25em;
+    height: 4px;
     margin: .25em 0;
     padding: 0;
     background: rgba(70, 67, 67, 0.801);
+    position: relative;
   }
   header ul li h1 > a{
     display: none;
