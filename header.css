@@ -113,12 +113,12 @@ header ul li:not(:nth-child(5)):hover { /* 第五個ul不變色 */
   position: relative;
   font-size: 1.1em;
   width: 100%;
+  height: 24px;
   text-align: center;
   padding: 12px 0;
   z-index: -1;
-  opacity: 0;
   top: -208px;
-  transition: .3s;
+  transition: top .3s;
 }
 #stretchBlock > a:hover {
   background: rgba(21, 20, 20, 0.27);
@@ -145,7 +145,6 @@ ul > label { /* 選單點擊處 */
 } 
 #stretchCheck:checked + #stretchBlock > a{
   top: 0;
-  opacity: 100;
   z-index: 1;
 } 
 /* ---------------- */
