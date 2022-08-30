@@ -91,17 +91,6 @@ h1 {
   font-weight: 500;
 }
 
-/* 裝飾  */
-header ul li:hover h1 > a{
-  color: rgb(255, 255, 255);
-  transition: .3s;
-}
-
-header ul li:not(:nth-child(5)):hover { /* 第五個ul不變色 */
-  background: rgba(102, 101, 101, 0.606);
-  transition: .3s;
-}
-
 /* 720px隱藏選單 */
 #stretchBlock {
   height: 0;
@@ -184,39 +173,39 @@ ul > label { /* 選單點擊處 */
 }
 
 header ul .menu720{
-  animation: menu720 .3s forwards;
+  animation: menu720 .2s forwards;
 }
 
 header ul .menu720-1 {
-  animation: menu720-1 .8s forwards;
+  animation: menu720-1 .4s forwards;
   margin: 0;
 }
 header ul .menu720-2 {
-  animation: menu720-2 .8s forwards;
+  animation: menu720-2 .4s forwards;
   margin: 0;
 }
 
 header ul .menu720-reverse {
-  animation: menu720 1s reverse forwards;
+  animation: menu720 .6s reverse forwards;
 }
 header ul .menu720-reverse-1 {
-  animation: menu720-1 .8s reverse forwards;
+  animation: menu720-1 .4s reverse forwards;
   margin: 0;
 }
 header ul .menu720-reverse-2 {
-  animation: menu720-2 .8s reverse forwards;
+  animation: menu720-2 .4s reverse forwards;
   margin: 0;
 }
 
-.newClass1 {
+.cross1 {
   top: 12px;
   transform: rotate(45deg);
 }
-.newClass2 {
+.cross2 {
   bottom: 12px;
   transform: rotate(-45deg);
 } 
-.newClass3 {
+.cross3 {
   opacity: 0;
 }
 /* ---------------- */
