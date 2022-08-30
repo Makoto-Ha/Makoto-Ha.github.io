@@ -26,6 +26,15 @@
     width: 100%;
     text-align: center;
   }
+
+  .article1 .row {
+    justify-content: center;
+  }
+
+  .article1 > .row > .wrap {
+    width: 80%;
+  }
+
   .content .article2 {
     width: 100%;
     text-align: center;
@@ -84,6 +93,11 @@
   .content .article1 > div:nth-child(2) { 
     padding-left: 0;
   }
+
+  .article1 .row > .wrap {
+    width: 80%;
+  }
+  
   .content .article2 {
     padding-left: 0;
   }

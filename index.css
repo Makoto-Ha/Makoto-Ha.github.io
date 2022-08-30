@@ -52,9 +52,6 @@
 }
 
 .content a {
-  display: inline-block;
-  margin: .15em 0;
-  width: 45%;
   font-size: 1.3em;
   line-height: 2em;
   color: rgba(43, 42, 42, 0.821);
@@ -73,6 +70,12 @@
 .content > .wrap{
   display: flex;
 }
+
+.row {
+  display: flex;
+  width: 100%;
+  margin: .2em 0;
+}
 /* 左邊內容 */
 .article1 {
   width: 60%;
@@ -80,12 +83,22 @@
   box-shadow: 2px 0px rgba(132, 131, 131, 0.218);
 }
 
-.article1 > div:nth-child(2) {
-  padding-left: 2em;
-}
-
 .article1 > div{
   width: 50%;
+}
+
+.article1 .row > .wrap {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+}
+
+.article1 .row > .wrap > div {
+  width: 50%;
+}
+
+.article1 > div:nth-child(2) {
+  padding-left: 2em;
 }
 
 /* 右邊內容 */
@@ -95,7 +108,7 @@
   padding-left: 2em;
 }
 
-.content .article2 > a {
+.content .article2 .wrap {
   width: 100%;
   position: relative;
 }
@@ -141,7 +154,7 @@ h2::after {
   top: 90%;
 } 
 
-.article2 > a::after {
+.article2 .wrap::after {
   content: '';
   width: 100%;
   height: 1px;
@@ -155,4 +168,18 @@ h2::after {
 .imgIcon {
   margin-top: .5em;
   max-width: 100%;
+}
+
+/* font-awsome */
+i {
+  font-size: 1em;
+  padding-right: 4px;
+}
+
+.text1 i {
+  color: rgb(255, 6, 122);
+}
+
+.text2 i {
+  color: rgb(78, 8, 255);
 }
