@@ -1,6 +1,6 @@
 /* RWD */
 @media screen and (min-width: 720px) {
-  header ul li:hover h1 > a{
+  header ul li:hover a{
     color: rgb(255, 255, 255);
     transition: .3s;
   }
@@ -76,7 +76,7 @@
     background: rgba(70, 67, 67, 0.801);
     position: relative;
   }
-  header ul li h1 > a{
+  header ul li > a{
     display: none;
   }
   header ul li:nth-child(2n+2) {

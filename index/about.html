@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>朗智科技有限公司</title>
+   <link rel="icon" href="../img/langzhiLogo.webp" type="image/icon type">
+   <link rel="preload" 
+   href="https://fonts.gstatic.com/s/notosanstc/v26/-nFkOG829Oofr2wohFbTp9i9kwMvDrVO3cuHnQmVtV4N3QDXzPiowFVyhy21F93pzxLWunL8lQ.0.woff2" 
+   as="font" 
+   crossorigin>
+   <link rel="stylesheet" href="../header.css">
+   <link rel="stylesheet" href="../rwd.css">
+   <style>
+    /* 去除header的marign達到圖片和header黏住 */
+     header {
+      margin-bottom: 0;
+     }
+    /* ------------------------------------  */
+
+     .theme {
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      max-width: 1920px;
+      width: 100%;
+      height: 350px;
+      background-image: url('../img/mountains.webp');
+     }
+
+     .theme > div {
+      width: 70%;
+     }
+     
+     /* footer置底 */
+     section:nth-of-type(2) {
+      min-height: calc(100% - 454px);
+     }
+
+     @media screen and (max-width: 1024px) {
+      section:nth-of-type(2) {
+        min-height: calc(100% - 446px);
+      }
+     }
+     /* --------- */
+
+     .description {
+      margin: 0 auto;
+      padding-top: 3em;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      max-width: 1920px;
+     }
+
+     .description > .content {
+      width: 70%;
+     }
+
+     .description > .content > p {
+      font-size: 1.2em;
+      margin: 1em 0;
+      color: rgb(100, 100, 100);
+     }
+
+     h2 {
+      font-size: 2.7em;
+      color: #fff;
+      text-shadow: 0.1em 0.1em 0.1em #000;
+     }
+     
+     h3 {
+      font-size: 1.2em;
+      color: #fff;
+      text-shadow: 0.1em 0.1em 0.1em #000;
+     }
+   </style>
+</head>
+<body>
+  <input type="checkbox" id="stretchCheck">
+  <header>
+    <div>
+      <a href="../index.html"><img src="../img/langzhiLogo.webp" alt="langzhiLogo"></a>
+      <h1><a href="../index.html">朗智科技有限公司</a></h1>
+    </div>
+    <ul>
+      <li><a href="../index.html">首頁</a></li>
+      <li><a href="../index/factory.html">廠區目錄</a></li>
+      <li><a href="#">品質認證</a></li>
+      <li><a href="#">關於朗智</a></li>
+      <li></li>
+      <label for="stretchCheck">.</label>
+    </ul>
+  </header>
+  <!-- 按鈕切換用div -->
+  <div id="stretchBlock">
+    <a href="../index.html">首頁</a>
+    <a href="../index/factory.html">廠區目錄</a>
+    <a href="#">品質認證</a>
+    <a href="#">關於朗智</a>
+  </div> 
+  <!-- ----------- -->
+  <section>
+    <div class="theme">
+      <div>
+        <h2>關於朗智公司</h1>
+        <h3>朗智公司成立於1997年是家全球橡膠產品製造公司</h2>
+      </div>
+    </div>
+  </section>
+  <section class="descr">
+    <div class="description">
+      <div class="content">
+        <p>朗智科技有限公司成立於民國86年，二十年多專注於橡膠代工，生產各式橡膠產品和橡膠附加產品，例如運動錶帶，手機汽車零件等。</p>
+        <p>具有技術上和設備系統優勢。</p>
+        <p>具備嶄新高品質之真空機台與高精密度量測儀器。</p>
+        <p>熟悉製造流程，精確管控原物料，生產以達客戶要求ISO品質系統。</p>
+        <p>清潔級工作環境，日夜班生產滿足客戶需求，60人背膠及塗膠人力支援。</p>
+      </div>
+    </div>
+  </section>
+  <section class="footer">251新北市淡水區奎柔山路100之6號 +886-2625-0555</section>
+</body>
+<script src="../rwd.js"></script>
+</html>
