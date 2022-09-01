@@ -54,3 +54,8 @@ label.addEventListener('click', () => {
     ulChilds[4].classList.add('menu720-reverse-2');
   }
 })
+
+// 測試js控制footer置底
+
+let footer = document.querySelector('.footer');
+footer.style = `top: ${document.body.scrollHeight}px`

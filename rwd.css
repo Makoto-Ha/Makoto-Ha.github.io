@@ -59,6 +59,10 @@
     width: 50%;
   }
 
+  header div h1 > a {
+    font-size: 1em;
+  }
+
   /* 導覽列中文字體變成選單 */
   header ul {
     width: 3em;
