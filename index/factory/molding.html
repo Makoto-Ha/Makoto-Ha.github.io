@@ -13,7 +13,7 @@
     .factory {
       max-width: 1200px;
       width: 90%;
-      margin: 0 auto;
+      margin: 0 auto 1em auto;
     }
     .factory .wrap {
       border: 1px solid rgba(108, 103, 103, 0.664);
@@ -58,7 +58,7 @@
     .container {
       max-width: 1200px;
       width: 90%;
-      margin: 1em auto 0 auto;
+      margin: 0 auto;
     }
     .container > .wrap {
       display: flex;
@@ -85,9 +85,12 @@
       border-bottom: 1px solid #ccc;
       list-style-type: none;
     }
-    .option ul li a{
+    .option ul li a {
       line-height: 200%;
       color: rgb(58, 57, 57);
+    }
+    .option ul li:nth-child(3) a {
+      color: rgb(231, 33, 56);
     }
     .option span {
       font-size: .5em;
@@ -207,9 +210,9 @@
     <ul>
       <li><a href="../../index.html">首頁</a></li>
       <li><a href="../factory.html">廠區目錄</a></li>
+      <li><a href="../product.html">產品目錄</a></li>
       <li><a href="#">品質認證</a></li>
       <li><a href="../about.html">關於朗智</a></li>
-      <li></li>
       <label for="stretchCheck">.</label>
     </ul>
   </header>
@@ -217,10 +220,11 @@
   <div id="stretchBlock">
     <a href="../../index.html">首頁</a>
     <a href="../factory.html">廠區目錄</a>
+    <a href="../product.html">產品目錄</a>
     <a href="#">品質認證</a>
     <a href="../about.html">關於朗智</a>
   </div> 
-  <!-- ------------ -->
+  <!------------------>
   <section id="factory">
     <div class="factory">
       <div class="wrap">
@@ -235,7 +239,7 @@
             <li><a href="molding.html">成型區</a></li>
             <li><a href="punching.html">沖孔區</a></li>
             <li><a href="qc.html">檢驗區</a></li>    
-            <li><a href="#">辦公室</a></li>
+            <li><a href="#">待補充</a></li>
           </ul>
         </div>
       </div>
@@ -245,14 +249,14 @@
   <section class="container">
     <div class="wrap">
       <div class="option">
-        <h3>Factory</h3>
+        <h3>廠區目錄</h3>
         <ul>
           <li><span>▶</span><a href="office.html">會議室</a></li>
           <li><span>▶</span><a href="refinement.html">精煉室</a></li>
           <li><span>▶</span><a href="molding.html">成型區</a></li>
           <li><span>▶</span><a href="punching.html">沖孔區</a></li>
           <li><span>▶</span><a href="qc.html">檢驗區</a></li>
-          <li><span>▶</span><a href="#">辦公室</a></li>
+          <li><span>▶</span><a href="#">待補充</a></li>
         </ul>
       </div>
       <div class="office">

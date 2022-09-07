@@ -5,7 +5,7 @@
     transition: .3s;
   }
   
-  header ul li:not(:nth-child(5)):hover { /* 第五個ul不變色 */
+  header ul li:hover { /* 寫在這裡是因為不希望720px以下裝置受到hover影響 */
     background: rgba(102, 101, 101, 0.606);
     transition: .3s;
   }

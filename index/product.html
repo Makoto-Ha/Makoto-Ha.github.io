@@ -85,12 +85,9 @@
       border-bottom: 1px solid #ccc;
       list-style-type: none;
     }
-    .option ul li a {
+    .option ul li a{
       line-height: 200%;
       color: rgb(58, 57, 57);
-    }
-    .option ul li:nth-child(2) a {
-      color: rgb(231, 33, 56);
     }
     .option span {
       font-size: .5em;
@@ -111,10 +108,9 @@
     .office > div {
       width: 100%;
       display: flex;
-      justify-content: center;
       align-items: center;
       flex-wrap: wrap;
-      background:linear-gradient(45deg, rgba(108, 86, 251, 0.93) 50%,rgba(253, 255, 112, 0.93) 50%);
+      background:linear-gradient(45deg, rgba(58, 5, 249, 0.93) 50%,rgba(238, 246, 9, 0.93) 50%);
     }
     .office .imgWrap {
       position: relative;
@@ -129,20 +125,17 @@
       width: 100%;
       height: 100%;
     }
-    .office div div {
+    .office span {
+      display: block;
       width: 50%;
-      display: flex;
-      justify-content: center;
+      text-align: center;
+      font-size: 2em;
     }
-    .office div div span {
-      width: 80%;
-      font-size: 1.5em;
+    .office span:nth-child(2) {
+      color: rgba(58, 5, 249);
     }
-    .office div div:nth-child(2) span {
-      color: rgb(55, 0, 255)
-    }
-    .office div div:nth-child(1) span {
-      color: rgb(253, 255, 112, 0.93);
+    .office span:nth-child(1) {
+      color: rgba(238, 246, 9);
     }
     .footer {
       width: 100%;
@@ -171,16 +164,8 @@
       .office > div:not(:nth-of-type(2n)) {
         flex-direction: column-reverse;
       }
-      .office > div > div:nth-child(1) span {
-        color: rgba(58, 5, 249, 0.93);
-      }
-      .office > div {
-        justify-content: flex-end;
-        align-items: flex-end;
-      }
-      .office > div > div {
-        width: 90%;
-        justify-content: flex-end;
+      .office > div:nth-child(2n) > span {
+        color: rgba(58, 5, 249);
       }
       .office .imgWrap {
         width: 100%;
@@ -192,9 +177,7 @@
       .office span {
         width: 100%;
         padding: .3em 0;
-      }
-      .office div div span {
-        font-size: 1.3em;
+        font-size: 1.6em;
       }
     }
    </style>
@@ -203,42 +186,41 @@
   <input type="checkbox" id="stretchCheck">
   <header>
     <div>
-      <a href="../../index.html"><img src="../../img/langzhiLogo.webp" alt="langzhiLogo"></a>
-      <h1><a href="../../index.html">朗智科技有限公司</a></h1>
+      <a href="../index.html"><img src="../img/langzhiLogo.webp" alt="langzhiLogo"></a>
+      <h1><a href="../index.html">朗智科技有限公司</a></h1>
     </div>
     <ul>
-      <li><a href="../../index.html">首頁</a></li>
-      <li><a href="../factory.html">廠區目錄</a></li>
-      <li><a href="../product.html">產品目錄</a></li>
+      <li><a href="../index.html">首頁</a></li>
+      <li><a href="factory.html">廠區目錄</a></li>
+      <li><a href="product.html">產品目錄</a></li>
       <li><a href="#">品質認證</a></li>
-      <li><a href="../about.html">關於朗智</a></li>
+      <li><a href="about.html">關於朗智</a></li>
       <label for="stretchCheck">.</label>
     </ul>
   </header>
+  </header>
    <!-- 按鈕切換用div -->
   <div id="stretchBlock">
-    <a href="../../index.html">首頁</a>
-    <a href="../factory.html">廠區目錄</a>
-    <a href="../product.html">產品目錄</a>
+    <a href="../index.html">首頁</a>
+    <a href="factory.html">廠區目錄</a>
+    <a href="product.html">產品目錄</a>
     <a href="#">品質認證</a>
-    <a href="../about.html">關於朗智</a>
+    <a href="about.html">關於朗智</a>
   </div> 
   <!------------------>
   <section id="factory">
     <div class="factory">
       <div class="wrap">
         <div>
-          <h3>廠區目錄</h3>
+          <h3>產品目錄</h3>
           <span class="triangle">▼</span>
         </div>
         <div class="display" style="display: none">
           <ul>
-            <li><a href="office.html">會議室</a></li>
-            <li><a href="refinement.html">精煉室</a></li>
-            <li><a href="molding.html">成型區</a></li>
-            <li><a href="punching.html">沖孔區</a></li>
-            <li><a href="qc.html">檢驗區</a></li>    
-            <li><a href="#">待補充</a></li>
+            <li><a href="product/watchband1.html">錶帶型號1</a></li>
+            <li><a href="product/watchband2.html">錶帶型號2</a></li>
+            <li><a href="product/watchband3.html">錶帶型號3</a></li>
+            <li><a href="product/watchband4.html">錶帶型號4</a></li>
           </ul>
         </div>
       </div>
@@ -248,39 +230,37 @@
   <section class="container">
     <div class="wrap">
       <div class="option">
-        <h3>廠區目錄</h3>
+        <h3>產品目錄</h3>
         <ul>
-          <li><span>▶</span><a href="office.html">會議室</a></li>
-          <li><span>▶</span><a href="refinement.html">精煉室</a></li>
-          <li><span>▶</span><a href="molding.html">成型區</a></li>
-          <li><span>▶</span><a href="punching.html">沖孔區</a></li>
-          <li><span>▶</span><a href="qc.html">檢驗區</a></li>
-          <li><span>▶</span><a href="#">待補充</a></li>
+          <li><span>▶</span><a href="product/watchband1.html">錶帶型號1</a></li>
+          <li><span>▶</span><a href="product/watchband2.html">錶帶型號2</a></li>
+          <li><span>▶</span><a href="product/watchband3.html">錶帶型號3</a></li>
+          <li><span>▶</span><a href="product/watchband4.html">錶帶型號4</a></li>
         </ul>
       </div>
       <div class="office">
         <div>
-          <div class="imgWrap"><img src="img/refinement01.webp" alt="refinement01"></div>
-          <div><span>依精煉排承擔數量或客戶生產計劃表準備原料</span></div>
+          <div class="imgWrap"><img src="product/img/watchband1.webp" alt="watchband1"></div>
+          <span>錶帶型號1</span>
         </div>
         <div>
-          <div><span>依需領原料填寫至料品庫存管制表</span></div>
-          <div class="imgWrap"><img src="img/refinement02.webp" alt="refinement02"></div> 
+          <span>錶帶型號2</span>
+          <div class="imgWrap"><img src="product/img/watchband3.webp" alt="watchband3"></div>
         </div>
         <div>
-          <div class="imgWrap"><img src="img/refinement03.webp" alt="refinement03"></div>
-          <div><span>依料品精煉規格表內之規格混料</span></div>
+          <div class="imgWrap"><img src="product/img/watchband5.webp" alt="watchband5"></div>
+          <span>錶帶型號3</span>
         </div>
         <div>
-          <div><span>依料品精煉規格表內之規格切成用料尺寸及條數</span></div>
-          <div class="imgWrap"><img src="img/refinement04.webp" alt="refinement04"></div>
+          <span>錶帶型號4</span>
+          <div class="imgWrap"><img src="product/img/watchband13.webp" alt="watchband13"></div>
         </div>
       </div>
     </div>
   </section>
   <section class="footer">251新北市淡水區奎柔山路100之6號 +886-2625-0555</section>
 </body>
-<script src="../../rwd.js"></script>
+<script src="../rwd.js"></script>
 <script>
   // 1024px以下中間上面會出現下拉選單
   document.querySelector('.factory .wrap > div:nth-child(1)').addEventListener('click', () => {
@@ -293,7 +273,7 @@
   let optionAs = [...document.querySelectorAll('.option > ul li a')];
   let optionSpan = [...document.querySelectorAll('.option > ul li span')];
   let events = ['mouseover', 'mouseout'];
-  // 左側選單互動
+  // 1024px左側選單互動
   optionAs.forEach((a, i) => {
     events.forEach(event => {
       a.addEventListener(event, () => {
@@ -303,12 +283,11 @@
   });
   //1024px後的下拉選單
   let optionLis = [...document.querySelectorAll('.factory .wrap ul li')];
-  let paths = ['office.html', 'refinement.html', 'molding.html', 'punching.html', 'qc.html', '#'];
+  let paths = ['product/watchband1.html', 'product/watchband2.html', 'product/watchband3.html', 'product/watchband4.html'];
   optionLis.forEach((li, i) => {
     li.addEventListener('click', () => {
       location.href = paths[i];
     })
   })
-
 </script>
 </html>
