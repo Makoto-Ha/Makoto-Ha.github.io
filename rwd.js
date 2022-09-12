@@ -5,7 +5,7 @@ if(document.body.offsetWidth <= 1024) {
   title.innerHTML = '<a href="/index.html">朗智科技</a>';
 }
 // 720px 選單
-let ulChilds = document.querySelectorAll('ul li');
+let ulChilds = document.querySelectorAll('header ul li');
 let stretchBlock = document.getElementById('stretchBlock');
 let stretchCheck = document.getElementById('stretchCheck');
 let label = document.querySelector('label');
@@ -55,7 +55,63 @@ label.addEventListener('click', () => {
   }
 })
 
-// 測試js控制footer置底
+// footer置底
+document.querySelector('.footer').style = `top: ${document.body.scrollHeight}px`
 
-let footer = document.querySelector('.footer');
-footer.style = `top: ${document.body.scrollHeight}px`
+if(document.body.offsetWidth > 1024) {
+  //header紅色底線動畫
+  let borderAnimate = document.getElementById('borderAnimate');
+  // 設置底線初始位置
+  // 網址的key對應ulChilds的索引
+  let href = {
+    index: 0,
+    factory: 1,
+    molding: 1,
+    office: 1,
+    punching: 1,
+    qc: 1,
+    refinement: 1,
+    product: 2,
+    watchband1: 2,
+    watchband2: 2,
+    watchband3: 2,
+    watchband4: 2, 
+    certification: 3,
+    about: 4
+  }
+  // 切割當前網址
+  let key = location.href.substring(location.href.lastIndexOf('/')+1);
+      key = key.slice(0, key.lastIndexOf('.'));
+      
+  borderAnimate.style = `left: ${ulChilds[href[key] || 0].offsetLeft}px;
+                         width: ${ulChilds[href[key] || 0].offsetWidth}px`;
+  // 綁定事件
+  for(let i=0; i<ulChilds.length; i++) {
+    ulChilds[i].addEventListener('mouseenter', (e) => {
+      let move = borderAnimate.offsetLeft, mark; // 紅色底線當前位置  
+      // 底線動畫
+      const animate = () => {
+        if(e.target.offsetLeft > move) {
+          move = move + 3;
+          borderAnimate.style = `left: ${move}px;
+                              width: ${e.target.offsetWidth}px`;
+          if(e.target.offsetLeft <= move) {
+            clearInterval(mark);
+          };
+        }
+
+        if(e.target.offsetLeft < move) {
+          move = move - 3;
+          borderAnimate.style = `left: ${move}px;
+                              width: ${e.target.offsetWidth}px`;
+          if(e.target.offsetLeft >= move) {
+            clearInterval(mark);
+          };
+        }    
+      }
+      mark = setInterval(animate, 1);  
+    });
+  }
+
+
+}

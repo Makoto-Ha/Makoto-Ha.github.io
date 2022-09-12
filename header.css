@@ -221,3 +221,12 @@ header ul .menu720-reverse-2 {
   font-size: 12px;
 }
 /* ----- */
+
+#borderAnimate {
+  position: absolute;
+  width: 56px;
+  height: 2px;
+  background-color: #f00;
+  bottom:0;
+  left:938px;
+}

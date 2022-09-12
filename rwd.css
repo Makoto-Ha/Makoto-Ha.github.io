@@ -1,13 +1,8 @@
 /* RWD */
 @media screen and (min-width: 720px) {
   header ul li:hover a{
-    color: rgb(255, 255, 255);
-    transition: .3s;
-  }
-  
-  header ul li:hover { /* 寫在這裡是因為不希望720px以下裝置受到hover影響 */
-    background: rgba(102, 101, 101, 0.606);
-    transition: .3s;
+    color: rgb(255, 0, 0);
+    transition: .5s;
   }
  
   ul > label {
@@ -16,9 +11,13 @@
 }
 
 @media screen and (max-width: 1024px) {
-  header ul li{
+  header ul li {
     font-size: 16px;
     letter-spacing: 0;
+  }
+
+  header > #borderAnimate {
+    display: none;
   }
 
   .slideShow { /* 把上方padding-top去掉 */
