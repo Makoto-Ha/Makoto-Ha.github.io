@@ -147,7 +147,6 @@
 
   <section class="footer">251新北市淡水區奎柔山路100之6號 +886-2625-0555</section>
 </body>
-<script src="rwd.js"></script>
 <script>
   const imgs = document.querySelectorAll('.slideShow > .wrap > .imgs img');
   const switchs = [...document.querySelectorAll('.imgSwitch > span')];
@@ -193,5 +192,10 @@
       start(); // 再次開啟移動圖片定時器
     })
   })
+
+  // rwd 以下這種寫法解決了header底線跳動問題，懷疑是滾輪條的建立時機，導致body.offsetWidth寬度會不一樣
+  let rwd = document.createElement('script');
+  rwd.src = '../rwd.js';
+  document.body.appendChild(rwd);
 </script>
 </html>

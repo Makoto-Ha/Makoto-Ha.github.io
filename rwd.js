@@ -1,4 +1,4 @@
-// RWD樣式切換
+// 1024以下header標題修改
 let title = document.querySelector('header h1');
 
 if(document.body.offsetWidth <= 1024) {
@@ -53,9 +53,6 @@ label.addEventListener('click', () => {
   }
 })
 
-// footer置底
-document.querySelector('.footer').style = `top: ${document.body.scrollHeight}px`
-
 //header紅色底線動畫
 let borderAnimate = document.getElementById('borderAnimate');
 // 獲取當前網址所對應的ulChilds陣列索引
@@ -80,16 +77,20 @@ const hrefliIndex = () => {
   // 切割當前網址
   let key = location.href.substring(location.href.lastIndexOf('/')+1);
       key = key.slice(0, key.lastIndexOf('.'));
+
   return href[key];
 }
 // 設置底線初始位置    
+console.log(ulChilds[hrefliIndex() || 0].offsetLeft);
 borderAnimate.style = `left: ${ulChilds[hrefliIndex() || 0].offsetLeft}px;
                        width: ${ulChilds[hrefliIndex() || 0].offsetWidth}px`;
 // 綁定事件
+let mark; // 儲存interval的標記，用於停用上一個定時器，避免多個開啟
 for(let i=0; i<ulChilds.length; i++) {
   ulChilds[i].addEventListener('mouseenter', (e) => {
-    let move = borderAnimate.offsetLeft, mark; // 紅色底線當前位置  
+    let move = borderAnimate.offsetLeft; // 紅色底線當前位置  
     // 底線動畫
+    clearInterval(mark);
     const animate = () => {
       if(e.target.offsetLeft > move) {
         move = move + 3;
@@ -125,6 +126,4 @@ window.addEventListener('resize', () => {
   if(document.body.offsetWidth > 1024) {
     title.innerHTML = '<a href="/index.html">朗智科技有限公司</a>';
   }
-
-  document.querySelector('.footer').style = `top: ${document.body.scrollHeight}px`
 })
