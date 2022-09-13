@@ -4,15 +4,13 @@ let title = document.querySelector('header h1');
 if(document.body.offsetWidth <= 1024) {
   title.innerHTML = '<a href="/index.html">朗智科技</a>';
 }
-// 720px 選單
+// 720px選單點擊X動畫
 let ulChilds = document.querySelectorAll('header ul li');
 let stretchBlock = document.getElementById('stretchBlock');
 let stretchCheck = document.getElementById('stretchCheck');
 let label = document.querySelector('label');
 
-// 720px選單點擊X動畫
 // 注意click回調執行的
-
 // 點擊選單後把label控制按鈕消失，防止重複點擊
 document.querySelector('#stretchBlock > a').addEventListener('transitionstart', () => {
   label.style.display = 'none';
@@ -58,10 +56,10 @@ label.addEventListener('click', () => {
 // footer置底
 document.querySelector('.footer').style = `top: ${document.body.scrollHeight}px`
 
-if(document.body.offsetWidth > 1024) {
-  //header紅色底線動畫
-  let borderAnimate = document.getElementById('borderAnimate');
-  // 設置底線初始位置
+//header紅色底線動畫
+let borderAnimate = document.getElementById('borderAnimate');
+// 獲取當前網址所對應的ulChilds陣列索引
+const hrefliIndex = () => {
   // 網址的key對應ulChilds的索引
   let href = {
     index: 0,
@@ -82,36 +80,51 @@ if(document.body.offsetWidth > 1024) {
   // 切割當前網址
   let key = location.href.substring(location.href.lastIndexOf('/')+1);
       key = key.slice(0, key.lastIndexOf('.'));
-      
-  borderAnimate.style = `left: ${ulChilds[href[key] || 0].offsetLeft}px;
-                         width: ${ulChilds[href[key] || 0].offsetWidth}px`;
-  // 綁定事件
-  for(let i=0; i<ulChilds.length; i++) {
-    ulChilds[i].addEventListener('mouseenter', (e) => {
-      let move = borderAnimate.offsetLeft, mark; // 紅色底線當前位置  
-      // 底線動畫
-      const animate = () => {
-        if(e.target.offsetLeft > move) {
-          move = move + 3;
-          borderAnimate.style = `left: ${move}px;
-                              width: ${e.target.offsetWidth}px`;
-          if(e.target.offsetLeft <= move) {
-            clearInterval(mark);
-          };
-        }
-
-        if(e.target.offsetLeft < move) {
-          move = move - 3;
-          borderAnimate.style = `left: ${move}px;
-                              width: ${e.target.offsetWidth}px`;
-          if(e.target.offsetLeft >= move) {
-            clearInterval(mark);
-          };
-        }    
+  return href[key];
+}
+// 設置底線初始位置    
+borderAnimate.style = `left: ${ulChilds[hrefliIndex() || 0].offsetLeft}px;
+                       width: ${ulChilds[hrefliIndex() || 0].offsetWidth}px`;
+// 綁定事件
+for(let i=0; i<ulChilds.length; i++) {
+  ulChilds[i].addEventListener('mouseenter', (e) => {
+    let move = borderAnimate.offsetLeft, mark; // 紅色底線當前位置  
+    // 底線動畫
+    const animate = () => {
+      if(e.target.offsetLeft > move) {
+        move = move + 3;
+        borderAnimate.style = `left: ${move}px;
+                               width: ${e.target.offsetWidth}px`;
+        if(e.target.offsetLeft <= move) {
+          clearInterval(mark);
+        };
       }
-      mark = setInterval(animate, 1);  
-    });
+
+      if(e.target.offsetLeft < move) {
+        move = move - 3;
+        borderAnimate.style = `left: ${move}px;
+                               width: ${e.target.offsetWidth}px`;
+        if(e.target.offsetLeft >= move) {
+          clearInterval(mark);
+        };
+      }    
+    }
+    mark = setInterval(animate, 1);  
+  });
+}
+
+// 開發者工具響應設定
+window.addEventListener('resize', () => {
+  borderAnimate.style = `left: ${ulChilds[hrefliIndex() || 0].offsetLeft}px;
+                         width: ${ulChilds[hrefliIndex() || 0].offsetWidth}px`;
+
+  if(document.body.offsetWidth <= 1024) {
+    title.innerHTML = '<a href="/index.html">朗智科技</a>';
   }
 
+  if(document.body.offsetWidth > 1024) {
+    title.innerHTML = '<a href="/index.html">朗智科技有限公司</a>';
+  }
 
-}
+  document.querySelector('.footer').style = `top: ${document.body.scrollHeight}px`
+})
