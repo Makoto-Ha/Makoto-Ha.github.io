@@ -211,6 +211,7 @@ header ul .menu720-reverse-2 {
 
 /* footer */
 .footer {
+  position: absolute;
   width: 100%;
   padding: 6px 0;
   background: rgba(41, 54, 54, 0.181);

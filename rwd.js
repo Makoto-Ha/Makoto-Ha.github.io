@@ -80,10 +80,6 @@ const hrefliIndex = () => {
 
   return href[key];
 }
-// 設置底線初始位置    
-console.log(ulChilds[hrefliIndex() || 0].offsetLeft);
-borderAnimate.style = `left: ${ulChilds[hrefliIndex() || 0].offsetLeft}px;
-                       width: ${ulChilds[hrefliIndex() || 0].offsetWidth}px`;
 // 綁定事件
 let mark; // 儲存interval的標記，用於停用上一個定時器，避免多個開啟
 for(let i=0; i<ulChilds.length; i++) {
@@ -126,4 +122,17 @@ window.addEventListener('resize', () => {
   if(document.body.offsetWidth > 1024) {
     title.innerHTML = '<a href="/index.html">朗智科技有限公司</a>';
   }
+
+  document.querySelector('.footer').style = `top: ${document.body.scrollHeight+5}px`;
+})
+
+// footer置底
+window.addEventListener('load', () => {
+  document.querySelector('.footer').style = `top: ${document.body.scrollHeight+5}px`;
+  // 設置底線初始位置
+  // 這邊有細節，為什麼底線初始位置要放在load事件下，因為load是等所有資源加載完畢後才觸發。
+  // document.body.offsetWidth會在load之前先計算完畢，也就是如果滾動條沒出現，那麼就會少滾動條的17px。
+  // 所以沒寫在load裡面就會少了17px，但如果放在load裡面，就會先執行footer置底後出現滾動條，再計算body寬度，這樣就不會少17px了。
+  borderAnimate.style = `left: ${ulChilds[hrefliIndex() || 0].offsetLeft}px;
+  width: ${ulChilds[hrefliIndex() || 0].offsetWidth}px`;
 })
