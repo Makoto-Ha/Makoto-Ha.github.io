@@ -4,6 +4,7 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta name="description" content="朗智科技,朗智科技有限公司,統編:16347416,地址:新北市淡水區下圭柔山100-6號,工廠,橡膠,代工,橡膠代工">
+   <meta property="og:url" content="https://www.tlzru.com">
    <meta property="og:title" content="朗智科技有限公司">
    <meta property="og:description" content="朗智科技,朗智科技有限公司,統編:16347416,地址:新北市淡水區下圭柔山100-6號,工廠,橡膠,代工,橡膠代工">
    <meta property="og:image" content="https://img.onl/mMFTpM">
@@ -152,10 +153,15 @@
   <section class="footer">251新北市淡水區奎柔山路100之6號 +886-2625-0555</section>
 </body>
 <script>
+  // rwd 以下這種寫法解決了header底線跳動問題，懷疑是滾輪條的建立時機，導致body.offsetWidth寬度會不一樣
+  let rwd = document.createElement('script');
+  rwd.src = '../rwd.js';
+  document.body.appendChild(rwd);
+  
+  // 輪播圖
   const imgs = document.querySelectorAll('.slideShow > .wrap > .imgs img');
   const switchs = [...document.querySelectorAll('.imgSwitch > span')];
   let move = 0, time, stop;
-  // 輪播圖
   let start = () => {
     let animate = () => {
       if(!time) {
@@ -196,10 +202,5 @@
       start(); // 再次開啟移動圖片定時器
     })
   })
-
-  // rwd 以下這種寫法解決了header底線跳動問題，懷疑是滾輪條的建立時機，導致body.offsetWidth寬度會不一樣
-  let rwd = document.createElement('script');
-  rwd.src = '../rwd.js';
-  document.body.appendChild(rwd);
 </script>
 </html>
