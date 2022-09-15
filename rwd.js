@@ -134,8 +134,8 @@ window.addEventListener('resize', () => {
                                              opacity: 1;`;
 })
 
-// footer置底
 window.addEventListener('load', () => {
+  // footer置底
   document.querySelector('.footer').style = `top: ${document.body.scrollHeight+5}px;
                                              opacity: 1;`;
   // 設置底線初始位置

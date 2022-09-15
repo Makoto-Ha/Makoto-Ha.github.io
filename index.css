@@ -161,15 +161,15 @@ h2::after {
 }
 
 /* font-awsome */
-i {
+svg {
   font-size: 1em;
   padding-right: 4px;
 }
 
-.text1 i {
+.text1 svg {
   color: rgb(255, 6, 122);
 }
 
-.text2 i {
+.text2 svg {
   color: rgb(78, 8, 255);
 }
