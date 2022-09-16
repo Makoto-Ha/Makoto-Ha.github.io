@@ -14,76 +14,77 @@
    href="https://fonts.gstatic.com/s/notosanstc/v26/-nFkOG829Oofr2wohFbTp9i9kwMvDrVO3cuHnQmVtV4N3QDXzPiowFVyhy21F93pzxLWunL8lQ.0.woff2" 
    as="font" 
    crossorigin>
+   <script src="https://kit.fontawesome.com/43bcc29bc3.js" crossorigin="anonymous" defer></script>
    <link rel="stylesheet" href="../header.css">
    <link rel="stylesheet" href="../rwd.css">
    <style>
-    /* 去除header的marign達到圖片和header黏住 */
-     header {
-      margin-bottom: 0;
-     }
-    /* ------------------------------------  */
-
-     .theme {
-      margin: 0 auto;
+    .hotnews {
+      width: 30%;
+      background: rgb(255, 255, 255);
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      max-width: 1920px;
-      width: 100%;
-      height: 350px;
-      background-image: url('../img/mountains.webp');
-     }
-
-     .theme > div {
-      width: 70%;
-     }
-     
-     /* --------- */
-     .description {
-      width: 100%;
-      max-width: 1920px;
       margin: 0 auto;
-      padding-top: 1em;
+      padding: 6px;
+      border-radius: 1%;
+      box-shadow: 1px 2px 15px rgba(132, 131, 131, 0.218);
+    }
+
+    .hotnews > .title > .wrap > .message {
       display: flex;
       justify-content: center;
-     }
+      align-items: center;
+    }
 
-     .description > .content {
-      width: 70%;
-     }
+    .hotnews > .content {
+      padding: 6px 0;
+    }
 
-     .description > .content > p {
+    h2 {
+      font-size: 2.4em;
+      text-align: center;
+      color: rgba(51, 51, 51, 0.914);
+    }
+
+    h3 {
+      font-size: 1.8em;
+      color: red;
+    }
+
+    p {
       font-size: 1.2em;
-      margin: 1em 0;
       color: rgb(100, 100, 100);
-     }
+      word-break: break-all;
+    }
 
-     h2 {
-      font-size: 2.7em;
-      color: #fff;
-      text-shadow: 0.1em 0.1em 0.1em #000;
-     }
-     
-     h3 {
-      font-size: 1.2em;
-      color: #fff;
-      text-shadow: 0.1em 0.1em 0.1em #000;
-     }
+    svg {
+      font-size: 2em;
+      padding-right: 5px;
+    }
 
-     @media screen and (max-width: 720px) {
-      .theme div > p {
-        font-size: 1em;
+    @media screen and (max-width: 1024px) {
+      .hotnews {
+        width: 50%;
+      }
+    }
+
+    @media screen and (max-width: 720px) {
+      .hotnews {
+        width: 100%;
       }
 
-      .theme div > h2 {
+      h2 {
         font-size: 2em;
       }
 
-      .theme div > h3 {
+      h3 {
+        font-size: 1.4em;
+      }
+
+      p {
         font-size: 1em;
       }
-     }
+    }
    </style>
 </head>
 <body>
@@ -112,23 +113,19 @@
     <a href="about.html">關於朗智</a>
   </div> 
   <!----------------->
-  <section>
-    <div class="theme">
-      <div>
-        <h2>關於朗智公司</h2>
-        <h3>朗智公司成立於1997年是家全球橡膠產品製造公司</h3>
+  <section class="hotnews">
+    <div class="title">
+      <div class="wrap">
+        <div class="message">
+          <i class="fa-brands fa-battle-net"></i>
+          <h2>最新消息</h2>
+        </div>
+        <h3>來電接洽橡膠代工訂單</h3>
       </div>
-    </div>
-  </section>
-  <section>
-    <div class="description">
-      <div class="content">
-        <p>朗智科技有限公司成立於民國86年，二十年多專注於橡膠代工，生產各式橡膠產品和橡膠附加產品，例如運動錶帶，手機汽車零件等。</p>
-        <p>具有技術上和設備系統優勢。</p>
-        <p>具備嶄新高品質之真空機台與高精密度量測儀器。</p>
-        <p>熟悉製造流程，精確管控原物料，生產以達客戶要求ISO品質系統。</p>
-        <p>整潔的工作環境，日夜班生產滿足客戶需求，60人背膠及塗膠人力支援。</p>
-      </div>
+    </div>  
+    <div class="content">
+      <p>如有橡膠相關訂單，播打02-26250555，詢問訂單相關細節。</p>
+      <p>有按鍵、錶帶、筆電底座、腳墊等製成經驗。</p>
     </div>
   </section>
   <footer>251新北市淡水區奎柔山路100之6號 +886-2625-0555</footer>
