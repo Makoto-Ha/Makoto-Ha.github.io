@@ -256,7 +256,7 @@
       </div>
     </div>
   </section>
-  <section class="footer">251新北市淡水區奎柔山路100之6號 +886-2625-0555</section>
+  <footer>251新北市淡水區奎柔山路100之6號 +886-2625-0555</footer>
 </body>
 <script src="../rwd.js"></script>
 <script>
@@ -266,6 +266,9 @@
     let factory = document.querySelector('.factory .display');
     factory.style.display = factory.style.display === 'none' ? 'flex' : 'none'; 
     triangle.textContent = factory.style.display === 'none' ? '▼' : '▲';
+    // 下拉選單打開後，body高度變高了，重新計算footer所需要的高度，並置底
+    document.querySelector('footer').style = `top: ${document.body.scrollHeight+5}px;
+                                               opacity: 1;`;
   })
   // 1024px的左側選單鼠標移入會浮動
   let optionAs = [...document.querySelectorAll('.option > ul li a')];

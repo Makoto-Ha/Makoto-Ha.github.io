@@ -211,8 +211,7 @@ header ul .menu720-reverse-2 {
 }
 /* ---------------- */
 
-/* footer */
-.footer {
+footer {
   position: absolute;
   width: 100%;
   padding: 6px 0;
@@ -221,7 +220,6 @@ header ul .menu720-reverse-2 {
   font-size: 12px;
   opacity: 0;
 }
-/* ----- */
 
 /* header紅色底線，動畫用 */
 #borderAnimate {

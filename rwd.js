@@ -37,6 +37,9 @@ ulChilds[0].addEventListener('animationend', () => {
   }
 
   label.style.display = ''; // 等待X動畫結束後把label還原，允許點擊
+  // footer置底
+  document.querySelector('footer').style = `top: ${document.body.scrollHeight+5}px;
+                                             opacity: 1;`;
 })
 
 label.addEventListener('click', () => {
@@ -118,10 +121,11 @@ for(let i=0; i<ulChilds.length; i++) {
 
 // 開發者工具響應設定
 window.addEventListener('resize', () => {
+  // 響應中修改header底線位置
   borderAnimate.style = `left: ${ulChilds[hrefliIndex() || 0].offsetLeft}px;
                          width: ${ulChilds[hrefliIndex() || 0].offsetWidth}px;
                          opacity: 1;`;
-
+  // 響應中更改字體
   if(document.body.offsetWidth <= 1024) {
     title.innerHTML = '<a href="/index.html">朗智科技</a>';
   }
@@ -130,13 +134,24 @@ window.addEventListener('resize', () => {
     title.innerHTML = '<a href="/index.html">朗智科技有限公司</a>';
   }
 
-  document.querySelector('.footer').style = `top: ${document.body.scrollHeight+5}px;
+  // 響應中還原720px選單的操作
+  ulChilds[0].classList.remove('cross1');
+  ulChilds[2].classList.remove('cross3');
+  ulChilds[4].classList.remove('cross2');
+  ulChilds[0].classList.remove('menu720-1');
+  ulChilds[2].classList.remove('menu720');
+  ulChilds[4].classList.remove('menu720-2');
+  stretchCheck.checked = false;
+  label.style.display = '';
+
+  // 響應中根據尺寸大小擺放footer
+  document.querySelector('footer').style = `top: ${document.body.scrollHeight+5}px;
                                              opacity: 1;`;
 })
 
 window.addEventListener('load', () => {
   // footer置底
-  document.querySelector('.footer').style = `top: ${document.body.scrollHeight+5}px;
+  document.querySelector('footer').style = `top: ${document.body.scrollHeight+5}px;
                                              opacity: 1;`;
   // 設置底線初始位置
   // 這邊有細節，為什麼底線初始位置要放在load事件下，因為load是等所有資源加載完畢後才觸發。
